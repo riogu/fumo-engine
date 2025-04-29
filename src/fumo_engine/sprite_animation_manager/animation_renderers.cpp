@@ -35,7 +35,7 @@ void AnimationRenderer::draw_animation(const AnimationInfo& animation_info,
     // PRINT("GAMING");
     // debug_print_animation_info(animation_info);
 
-    BeginMode2D(*fumo_engine->camera);
+    BeginMode2D(fumo_engine->fumo_camera->camera);
 
     auto& player_state =
         fumo_engine->ECS->get_component<EntityState>(fumo_engine->player_id);

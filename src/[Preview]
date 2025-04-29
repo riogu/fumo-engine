@@ -1,8 +1,0 @@
-| 67|         DebugLevelEditor::resize(shape, mouse_position, body.position); \
-| 91| void DebugLevelEditor::resize(FumoRect& shape,
-|117| void DebugLevelEditor::resize(ParallelGravityField& shape,
-|120|     DebugLevelEditor::resize(shape.field_fumo_rect, mouse_position, body_position);
-|124| void DebugLevelEditor::resize(OutlineRect& shape,
-|127|     DebugLevelEditor::resize(shape.outline_rect, mouse_position, body_position);
-|131| void DebugLevelEditor::resize(ScreenTransitionRect& shape,
-|134|     DebugLevelEditor::resize(shape.transition_rect, mouse_position, body_position);

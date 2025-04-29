@@ -1,34 +1,31 @@
 #include "fumo_engine/core/fumo_engine.hpp"
+extern std::unique_ptr<FumoEngine> fumo_engine;
 #include "fumo_engine/level_editor/level_editor.hpp"
 #include "fumo_engine/serialization/fumo_serializer.hpp"
-extern std::unique_ptr<FumoEngine> fumo_engine;
-
-// void DebugLevelEditor::find_selection() {
-//
-//     // should only be one entity
-//     for (const auto& entity_id : sys_entities) {
-//
-//     }
-// }
 
 void DebugLevelEditor::handle_input() {
-    fumo_engine->camera->zoom += ((float)GetMouseWheelMove() * 0.05f);
+    fumo_engine->fumo_camera->camera.zoom +=
+        ((float)GetMouseWheelMove() * 0.05f);
+    if (fumo_engine->fumo_camera->camera.zoom < 0.05f)
+        fumo_engine->fumo_camera->camera.zoom = 0.05f;
 
-    FumoVec2 mouse_position = to_fumo_vec2(
-        GetScreenToWorld2D(GetMousePosition(), *fumo_engine->camera));
-    DrawCircleLinesV(GetMousePosition(), mouse_radius, GREEN);
+    FumoVec2 mouse_position =
+        to_fumo_vec2(GetScreenToWorld2D(GetMousePosition(),
+                                        fumo_engine->fumo_camera->camera));
+
+    // DrawCircleLinesV(GetMousePosition(), mouse_radius, GREEN);
 
     find_selection(mouse_position);
+    // if (IsKeyPressed(KEY_P)) reset_position();
 
-    if (IsKeyDown(KEY_LEFT_CONTROL) && IsKeyPressed(KEY_S)) save_level();
-
-    if (IsKeyPressed(KEY_P)) reset_position();
+    if (IsKeyDown(KEY_LEFT_SHIFT) && IsKeyPressed(KEY_S)) save_level();
     if (IsKeyPressed(KEY_D)) delete_planet(mouse_position);
     if (IsKeyDown(KEY_LEFT_ALT)) move_screen_to_mouse(mouse_position);
-    if (IsKeyPressed(KEY_F1)) spawn_circular_planet(mouse_position);
-    if (IsKeyPressed(KEY_F2)) spawn_rect(mouse_position);
-    if (IsKeyPressed(KEY_F3)) spawn_rect_field(mouse_position);
-    if (IsKeyPressed(KEY_F4)) spawn_transition_rect(mouse_position);
+    if (IsKeyPressed(KEY_F1)) spawn_circle(mouse_position);
+    if (IsKeyPressed(KEY_F2)) spawn_circular_field(mouse_position);
+    if (IsKeyPressed(KEY_F3)) spawn_rect(mouse_position);
+    if (IsKeyPressed(KEY_F4)) spawn_rect_field(mouse_position);
+    if (IsKeyPressed(KEY_F5)) spawn_transition_line(mouse_position);
 }
 
 //---------------------------------------------------------
@@ -39,9 +36,4 @@ void DebugLevelEditor::save_level() {
         fumo_engine->ECS->get_system<LevelSerializer>();
     // level_serializer->deserialize_levels();
     level_serializer->serialize_levels();
-}
-
-void DebugLevelEditor::reset_position() {
-    auto& body = fumo_engine->ECS->get_component<Body>(fumo_engine->player_id);
-    body.position = screenCenter;
 }

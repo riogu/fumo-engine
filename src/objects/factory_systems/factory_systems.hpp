@@ -14,6 +14,8 @@ class LevelEntityFactory: public System {
     void delete_all_planets();
 
     EntityId create_circular_planet(FumoVec2 position);
+    EntityId create_circular_field(FumoVec2 position);
+    EntityId create_circle(FumoVec2 position);
 
     EntityId create_rect(FumoVec2 position);
 

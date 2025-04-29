@@ -66,7 +66,8 @@ void StateHandler::movement_state_handler(Body& player_body,
             + player_body.get_real_x_velocity();
     }
 
-    UpdateCameraCenterSmoothFollow(fumo_engine->camera.get(), player_body);
+    // UpdateCameraCenterSmoothFollow(fumo_engine->camera.get(),
+    //                                player_body.position);
 
     raycast_jumping(player_body, player_capsule, player_state);
 

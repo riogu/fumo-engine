@@ -17,10 +17,12 @@ class DebugLevelEditor: public System {
     void resize_selection(FumoVec2 mouse_position);
 
     void spawn_circular_planet(FumoVec2 mouse_position);
+    void spawn_circular_field(FumoVec2 mouse_position);
+    void spawn_circle(FumoVec2 mouse_position);
 
     void spawn_rect(FumoVec2 mouse_position);
     void spawn_rect_field(FumoVec2 mouse_position);
-    void spawn_transition_rect(FumoVec2 mouse_position);
+    void spawn_transition_line(FumoVec2 mouse_position);
 
     void move_entity(FumoVec2 mouse_position);
     void find_selection(FumoVec2 mouse_position);
@@ -50,7 +52,7 @@ struct LevelEditorGUI {
     XMACRO(ParallelGravityField) \
     XMACRO(CircularGravityField) \
     XMACRO(OutlineRect) \
-    XMACRO(ScreenTransitionRect)
+    XMACRO(ScreenTransitionLine)
 
 #define XMACRO(Type) \
     template<> \

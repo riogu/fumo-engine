@@ -13,8 +13,8 @@
     std::cerr << #x << " ---> " << libassert::highlight_stringify(x) << '\n';
 
 struct FumoVec2 {
-    float x; // Vector x component
-    float y; // Vector y component
+    float x {0.0f}; // Vector x component
+    float y {0.0f}; // Vector y component
 
     inline Vector2 to_raylib_vec2() const { return {x, y}; }
     SERIALIZE(x, y)
@@ -321,8 +321,7 @@ inline bool operator!=(const FumoVec2& lhs, const FumoVec2& rhs) {
 #define FUMO_BLACK CLITERAL(FumoColor) {0, 0, 0, 255} // Black
 #define FUMO_BLANK CLITERAL(FumoColor) {0, 0, 0, 0} // Blank (Transparent)
 #define FUMO_MAGENTA CLITERAL(FumoColor) {255, 0, 255, 255} // Magenta
-#define FUMO_RAYWHITE \
-    CLITERAL(FumoColor) {245, 245, 245, 255} // My own White (raylib logo)
+#define FUMO_RAYWHITE CLITERAL(FumoColor) {245, 245, 245, 255}
 
 constexpr static int screenWidth = 1920;
 constexpr static int screenHeight = 1080;

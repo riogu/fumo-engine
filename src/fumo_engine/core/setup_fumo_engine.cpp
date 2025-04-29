@@ -15,21 +15,22 @@ void FumoEngine::setup_game() {
     Initialization::initialize_directories();
     player_id = PlayerInitializer::initialize_player();
 
-    camera = std::make_unique<Camera2D>();
+    fumo_camera = std::make_unique<FumoCamera>();
     const auto& player_body = ECS->get_component<Body>(player_id);
     // camera->target = player_body.position;
-    camera->target = screenCenter.to_raylib_vec2();
-    camera->rotation = 0.0f;
-    camera->zoom = 0.8f;
-    camera->offset = screenCenter.to_raylib_vec2();
+    fumo_camera->camera.target = screenCenter.to_raylib_vec2();
+    fumo_camera->camera.rotation = 0.0f;
+    fumo_camera->camera.zoom =
+        engine_mode == EngineMode::LEVEL_EDITING ? 0.4f : 1.0f;
+    fumo_camera->camera.offset = screenCenter.to_raylib_vec2();
 
     auto& player_animation = ECS->get_component<AnimationInfo>(player_id);
     AnimationPlayer::play(player_animation, "idle");
 
-    FumoRect collision_bounds {.x = player_body.position.x,
-                               .y = player_body.position.y,
-                               .width = RECT_WIDTH + MINIMUM_OBJECT_SIZE,
-                               .height = RECT_HEIGHT + MINIMUM_OBJECT_SIZE};
+    // FumoRect collision_bounds {.x = player_body.position.x,
+    //                            .y = player_body.position.y,
+    //                            .width = RECT_WIDTH + MINIMUM_OBJECT_SIZE,
+    //                            .height = RECT_HEIGHT + MINIMUM_OBJECT_SIZE};
     //
     // const auto& planet_factory = ECS->get_system<LevelEntityFactory>();
     // const auto& level_editor = ECS->get_system<DebugLevelEditor>();

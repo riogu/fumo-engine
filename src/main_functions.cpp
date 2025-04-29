@@ -39,14 +39,14 @@ void debug_print_animation_info(const AnimationInfo& animation_info) {
     std::cerr << '\n';
 }
 
-void UpdateCameraCenterSmoothFollow(Camera2D* camera, const Body& player) {
+void UpdateCameraCenterSmoothFollow(Camera2D* camera,
+                                    const FumoVec2& position) {
     float minSpeed = 30;
     float minEffectLength = 10;
     float fractionSpeed = 0.8f;
 
     camera->offset = {screenWidth / 2.0f, screenHeight / 2.0f};
-    FumoVec2 diff =
-        FumoVec2Subtract(player.position, to_fumo_vec2(camera->target));
+    FumoVec2 diff = FumoVec2Subtract(position, to_fumo_vec2(camera->target));
     float length = FumoVec2Length(diff);
 
     float scaling = 8.0f;
@@ -65,7 +65,7 @@ void UpdateCameraCenterSmoothFollow(Camera2D* camera, const Body& player) {
 void debug_player_drawing(const Capsule& player_capsule,
                           const Body& player_body) {
     // extra visualization code
-    BeginMode2D(*fumo_engine->camera);
+    BeginMode2D(fumo_engine->fumo_camera->camera);
     const auto& render =
         fumo_engine->ECS->get_component<Render>(fumo_engine->player_id);
     DrawCircleV(player_capsule.bottom_circle_center.to_raylib_vec2(),
@@ -133,7 +133,7 @@ void weird_debug_print(std::pair<float, FumoVec2> closest_pair,
                        std::pair<float, FumoVec2> top_pair) {
     // -------------------------------------------------------------------------------
     // DEBUG
-    BeginMode2D(*fumo_engine->camera);
+    BeginMode2D(fumo_engine->fumo_camera->camera);
 
     if (closest_pair.first == 0.0f) {
     } else if (closest_pair.first == bottom_pair.first) {

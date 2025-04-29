@@ -18,11 +18,20 @@ int key_down_event_moved(const int& Key,
                          const EntityId& id,
                          const DIRECTION& direction);
 
-FumoVec2 vec;
+// FumoVec2 vec;
+
+namespace PlayerActions {
+void reset_position() {
+    fumo_engine->ECS->get_component<Body>(fumo_engine->player_id).position =
+        screenCenter;
+}
+} // namespace PlayerActions
 
 int peidros_cool_dash(const EntityId& player_id, EntityState& player_state) {
 
     player_state.input_direction = {.x = 0, .y = 0};
+
+    if (IsKeyDown(KEY_P)) PlayerActions::reset_position();
 
     if (dash_key_check(KEY_LEFT,
                        EVENT_::ENTITY_MOVED,

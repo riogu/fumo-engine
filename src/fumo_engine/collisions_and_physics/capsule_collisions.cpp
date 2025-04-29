@@ -347,4 +347,83 @@ Collision capsule_to_circle_collision_solving(Capsule& player_capsule,
     return collision;
 }
 
+// [[nodiscard]] Collision LineToCapsuleCollision(const Capsule& player_capsule,
+//                                                const Body& player_body,
+//                                                const Line& line,
+//                                                const Body& line_body) {
+//     return LineToCapsuleCollision(
+//         player_capsule,
+//         player_body,
+//         {line.start + line_body.position, line.end + player_body.position});
+// }
+
+// [[nodiscard]] Collision LineToCapsuleCollision(const Capsule& player_capsule,
+//                                                const Body& player_body,
+//                                                const Line& line) {
+//
+//     Collision closest_collision;
+//     LINE_TO_SIDE_COLLISION(line, player_capsule.left_line, SHAPE::Capsule);
+//     LINE_TO_SIDE_COLLISION(line, player_capsule.right_line, SHAPE::Capsule);
+//
+//     const FumoVec2 closest_intersection =
+//         ClosestCircleLineIntersection(player_body.position,
+//                                       player_capsule.radius,
+//                                       line);
+//
+//     if (closest_intersection != FumoVec2 {0.0f, 0.0f}) {
+//         float buffer = 0.1f;
+//         // distance from each end of the line should add up to the length
+//         // if we are on the line
+//         float LineLength = FumoVec2Distance(line.start, line.end);
+//         float d1 = FumoVec2Distance(closest_intersection, line.start);
+//         float d2 = FumoVec2Distance(closest_intersection, line.end);
+//
+//         if (d1 + d2 >= LineLength - buffer && d1 + d2 <= LineLength + buffer) {
+//             closest_collision.intersection_point = closest_intersection;
+//             closest_collision.push_direction =
+//                 FumoVec2Normalize(player_body.position - closest_intersection);
+//             closest_collision.normal = closest_collision.push_direction;
+//             closest_collision.collided = true;
+//             closest_collision.distance =
+//                 FumoVec2Distance(line.start, closest_intersection);
+//             closest_collision.overlap =
+//                 FumoVec2Distance(line.end,
+//                                  closest_collision.intersection_point);
+//             closest_collision.collided_shape = SHAPE::Capsule;
+//         }
+//         // not all collision information is guaranteed to be filled
+//     }
+//
+//     return closest_collision;
+// }
+[[nodiscard]] bool LineToCapsuleCollided(const Capsule& player_capsule,
+                                         const Body& player_body,
+                                         const Line& line,
+                                         const Body& line_body) {
+    // lines store their real position in the body (kinda bad but its fine)
+    return LineToCapsuleCollided(player_capsule,
+                                 player_body,
+                                 Line {.start = line.start + line_body.position,
+                                       .end = line.end + line_body.position});
+}
+
+[[nodiscard]] bool LineToCapsuleCollided(const Capsule& player_capsule,
+                                         const Body& player_body,
+                                         const Line& line) {
+    // assumes that the line points correspond to the real positions
+    // most likely requires to add the body's position to this line
+
+    return (LineToLineCollided(line, player_capsule.left_line)
+            || LineToLineCollided(line, player_capsule.right_line)
+            || LineToCircleCollision(
+                   line,
+                   Circle {.radius = player_capsule.radius},
+                   Body {.position = player_capsule.bottom_circle_center})
+                   .collided
+            || LineToCircleCollision(
+                   line,
+                   Circle {.radius = player_capsule.radius},
+                   Body {.position = player_capsule.top_circle_center})
+                   .collided);
+}
 } // namespace Collisions

@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "fumo_engine/components.hpp"
-enum struct SHAPE { NO_SHAPE, Rectangle, Circle };
+enum struct SHAPE { NO_SHAPE, Rectangle, Circle, Capsule };
 
 // WARNING:
 // not all collision information is guaranteed to be filled!
@@ -38,6 +38,26 @@ struct RectBodyPair {
 };
 
 namespace Collisions {
+
+#define LINE_TO_SIDE_COLLISION(line, side, shape) \
+    do { \
+        Collision collision = LineToLineCollision(line, side); \
+        collision.distance = \
+            FumoVec2Distance(line.start, collision.intersection_point); \
+        if (collision.collided \
+            && (collision.distance < closest_collision.distance \
+                || closest_collision.distance == 0.0f)) { \
+            collision.push_direction = \
+                FumoVec2Normalize(line.start - collision.intersection_point); \
+            collision.overlap = \
+                FumoVec2Distance(line.start, line.end) - collision.distance; \
+            collision.collided_shape = shape; \
+            collision.normal = \
+                FumoVec2Snap4Directions(collision.push_direction); \
+            closest_collision = collision; \
+        } \
+    } while (0)
+
 void calculate_collided_region(Collision& collision,
                                const Capsule& player_capsule);
 [[nodiscard]] Collision
@@ -108,4 +128,21 @@ CircleToRectDistanceAndIntersection(const FumoVec2& circle_center,
                                                  const Body& player_body,
                                                  const Circle& circle_shape,
                                                  const Body& circle_body);
+
+[[nodiscard]] bool LineToCapsuleCollided(const Capsule& player_capsule,
+                                         const Body& player_body,
+                                         const Line& line,
+                                         const Body& line_body);
+[[nodiscard]] bool LineToCapsuleCollided(const Capsule& player_capsule,
+                                         const Body& player_body,
+                                         const Line& line);
+
+[[nodiscard]] Collision LineToCapsuleCollision(const Capsule& player_capsule,
+                                               const Body& player_body,
+                                               const Line& line,
+                                               const Body& line_body);
+[[nodiscard]] Collision LineToCapsuleCollision(const Capsule& player_capsule,
+                                               const Body& player_body,
+                                               const Line& line);
+
 } // namespace Collisions

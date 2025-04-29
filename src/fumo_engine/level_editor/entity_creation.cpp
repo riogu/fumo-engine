@@ -22,10 +22,21 @@ void DebugLevelEditor::spawn_circular_planet(FumoVec2 mouse_position) {
     const auto& planet_factory =
         fumo_engine->ECS->get_system<LevelEntityFactory>();
     EntityId entity_id = planet_factory->create_circular_planet(mouse_position);
-    //
 }
 
-void DebugLevelEditor::spawn_transition_rect(FumoVec2 mouse_position) {
+void DebugLevelEditor::spawn_circular_field(FumoVec2 mouse_position) {
+    const auto& planet_factory =
+        fumo_engine->ECS->get_system<LevelEntityFactory>();
+    EntityId entity_id = planet_factory->create_circular_field(mouse_position);
+}
+
+void DebugLevelEditor::spawn_circle(FumoVec2 mouse_position) {
+    const auto& planet_factory =
+        fumo_engine->ECS->get_system<LevelEntityFactory>();
+    EntityId entity_id = planet_factory->create_circle(mouse_position);
+}
+
+void DebugLevelEditor::spawn_transition_line(FumoVec2 mouse_position) {
     const auto& planet_factory =
         fumo_engine->ECS->get_system<LevelEntityFactory>();
     planet_factory->create_screen_transition(mouse_position);

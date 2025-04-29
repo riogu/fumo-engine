@@ -9,10 +9,12 @@
 #include "raylib.h"
 
 struct Line {
-    FumoVec2 start;
-    FumoVec2 end;
+    FumoVec2 start {};
+    FumoVec2 end {};
 
     void draw(const FumoColor& color, const FumoVec2& position) const;
+
+    void _capsule_draw_line(const FumoColor& color) const;
     SERIALIZE(start, end)
 };
 

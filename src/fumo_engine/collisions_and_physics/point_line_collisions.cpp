@@ -127,7 +127,7 @@ PointToLineDistanceAndIntersection(const FumoVec2& Point,
         / ((line2.end.y - line2.start.y) * (line1.end.x - line1.start.x)
            - (line2.end.x - line2.start.x) * (line1.end.y - line1.start.y));
     // if uA and uB are between 0-1, lines are colliding
-    float buffer = 0.0f;
+    float buffer = 0.1f;
     return (uA >= 0 && uA <= 1 + buffer && uB >= 0 && uB <= 1 + buffer);
 }
 

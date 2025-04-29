@@ -85,15 +85,16 @@ void register_systems_scheduled() {
         EntityQuery {
             .component_mask =
                 fumo_engine->ECS
-                    ->make_component_mask<Body, ScreenTransitionRect>(),
+                    ->make_component_mask<Body, ScreenTransitionLine>(),
             .component_filter = Filter::All});
 
     fumo_engine->ECS->register_system<DebugLevelEditor,
                                       MAX_PRIORITY - 1,
                                       SystemMode::EDITING_ONLY>(EntityQuery {
         .component_mask =
-            fumo_engine->ECS
-                ->make_component_mask<GravFieldFlag, ColliderObjectFlag>(),
+            fumo_engine->ECS->make_component_mask<GravFieldFlag,
+                                                  ColliderObjectFlag,
+                                                  ScreenTransitionLine>(),
         .component_filter = Filter::Any});
     // fumo_engine->ECS->register_system<TimerHandler, 7>(
     //     EntityQuery{.component_mask = fumo_engine->ECS->make_component_mask<Timer>(),

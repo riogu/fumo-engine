@@ -17,12 +17,12 @@ ALL_COMPONENTS_X_MACRO()
     XMACRO(ParallelGravityField) \
     XMACRO(CircularGravityField) \
     XMACRO(OutlineRect) \
-    XMACRO(ScreenTransitionRect) \
+    XMACRO(ScreenTransitionLine) \
     XMACRO(Line)
 
 void ComponentRenderer::draw_all_components() {
     DrawFPS(10, 10);
-    BeginMode2D(*fumo_engine->camera);
+    BeginMode2D(fumo_engine->fumo_camera->camera);
 
 #define XMACRO(Type) \
     if (fumo_engine->ECS->filter(entity_id, Type##_query)) { \
@@ -37,13 +37,13 @@ void ComponentRenderer::draw_all_components() {
     }
 
     // draw the selection on top of all the others
-    const auto& selection_rect_id =
-        fumo_engine->ECS->get_system<DebugLevelEditor>()
-            ->selection_rectangle_id;
-    fumo_engine->ECS->get_component<OutlineRect>(selection_rect_id)
-        .draw(
-            fumo_engine->ECS->get_component<Render>(selection_rect_id).color,
-            fumo_engine->ECS->get_component<Body>(selection_rect_id).position);
+    // const auto& selection_rect_id =
+    //     fumo_engine->ECS->get_system<DebugLevelEditor>()
+    //         ->selection_rectangle_id;
+    // fumo_engine->ECS->get_component<OutlineRect>(selection_rect_id)
+    //     .draw(
+    //         fumo_engine->ECS->get_component<Render>(selection_rect_id).color,
+    //         fumo_engine->ECS->get_component<Body>(selection_rect_id).position);
 
 #undef XMACRO // dont forget to undefine the xmacro
     EndMode2D();

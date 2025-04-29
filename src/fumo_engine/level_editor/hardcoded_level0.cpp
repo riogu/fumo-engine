@@ -8,6 +8,8 @@ extern std::unique_ptr<FumoEngine> fumo_engine;
 FumoVec2 starter_position = {0.0f, screenCenter.y + 400};
 float previous_width = 500.0f;
 
+FumoVec2 screenborders_position = {0.0f, 0.0f};
+
 void make_some_rects();
 void screen_border_lines();
 
@@ -17,17 +19,6 @@ void debug_spawn_level_objects() {
     const auto& planet_factory =
         fumo_engine->ECS->get_system<LevelEntityFactory>();
 
-    {
-        EntityId id_planet =
-            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
-
-        OutlineRect& outline_rect =
-            fumo_engine->ECS->get_component<OutlineRect>(id_planet);
-        outline_rect.outline_rect = {.x = 0.0f,
-                                     .y = 0.0f,
-                                     .width = screenWidth,
-                                     .height = screenHeight};
-    }
     {
         // make first planet that owns the player
         EntityId id_planet = planet_factory->debug__internal_create_rect_planet(
@@ -46,6 +37,45 @@ void debug_spawn_level_objects() {
             fumo_engine->ECS->get_component<ParallelGravityField>(id_planet
                                                                   + 1);
         rect_field.field_fumo_rect.width = rect_planet.width;
+    }
+
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
     }
 }
 

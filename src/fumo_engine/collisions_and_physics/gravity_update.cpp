@@ -1,6 +1,3 @@
-#include <raylib.h>
-
-#include "constants/movement_constants.hpp"
 #include "fumo_engine/collisions_and_physics/gravity_field_systems.hpp"
 #include "fumo_engine/core/fumo_engine.hpp"
 #include "fumo_raylib.hpp"
@@ -56,8 +53,7 @@ void GravityUpdater::update_gravity(EntityId entity_id, Body& player_body) {
         // methods for circular gravity fields
         auto& circular_field =
             fumo_engine->ECS->get_component<CircularGravityField>(planet_id);
-        const auto& circle_shape =
-            fumo_engine->ECS->get_component<Circle>(planet_id);
+
         circular_field.update_gravity(player_body, body_planet);
 
         gravity_direction = circular_field.gravity_direction;

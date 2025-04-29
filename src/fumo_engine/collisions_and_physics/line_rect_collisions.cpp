@@ -24,25 +24,6 @@ namespace Collisions {
             || LineToLineCollided(line, bottom_side));
 }
 
-#define LINE_TO_SIDE_COLLISION(line, side) \
-    do { \
-        Collision collision = LineToLineCollision(line, side); \
-        collision.distance = \
-            FumoVec2Distance(line.start, collision.intersection_point); \
-        if (collision.collided \
-            && (collision.distance < closest_collision.distance \
-                || closest_collision.distance == 0.0f)) { \
-            collision.push_direction = \
-                FumoVec2Normalize(line.start - collision.intersection_point); \
-            collision.overlap = \
-                FumoVec2Distance(line.start, line.end) - collision.distance; \
-            collision.collided_shape = SHAPE::Rectangle; \
-            collision.normal = \
-                FumoVec2Snap4Directions(collision.push_direction); \
-            closest_collision = collision; \
-        } \
-    } while (0)
-
 [[nodiscard]] const Collision LineToRectCollision(const Line& line,
                                                   const FumoRect& rect,
                                                   const Body& rect_body) {
@@ -67,10 +48,10 @@ namespace Collisions {
     // PRINT(collision.normal.y)
     // print_direction(vector_to_direction(collision.normal));
 
-    LINE_TO_SIDE_COLLISION(line, left_side);
-    LINE_TO_SIDE_COLLISION(line, right_side);
-    LINE_TO_SIDE_COLLISION(line, top_side);
-    LINE_TO_SIDE_COLLISION(line, bottom_side);
+    LINE_TO_SIDE_COLLISION(line, left_side, SHAPE::Rectangle);
+    LINE_TO_SIDE_COLLISION(line, right_side, SHAPE::Rectangle);
+    LINE_TO_SIDE_COLLISION(line, top_side, SHAPE::Rectangle);
+    LINE_TO_SIDE_COLLISION(line, bottom_side, SHAPE::Rectangle);
 
     return closest_collision;
 }

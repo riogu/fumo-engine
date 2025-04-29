@@ -11,17 +11,17 @@ ALL_COMPONENTS_X_MACRO()
 void DebugLevelEditor::find_selection(FumoVec2 mouse_position) {
 #define XMACRO(Type) \
     if (fumo_engine->ECS->filter(entity_id, Type##_query)) { \
-        auto& shape = fumo_engine->ECS->get_component<Type>(entity_id); \
-        DebugLevelEditor::find_selection_object(entity_id, \
-                                                shape, \
-                                                mouse_position, \
-                                                body.position); \
+        DebugLevelEditor::find_selection_object( \
+            entity_id, \
+            fumo_engine->ECS->get_component<Type>(entity_id), \
+            mouse_position, \
+            fumo_engine->ECS->get_component<Body>(entity_id).position); \
         continue; \
     }
+
     EntityId previous_selected = currently_selected_entity;
 
     for (const auto& entity_id : sys_entities) {
-        auto& body = fumo_engine->ECS->get_component<Body>(entity_id);
 
         if (entity_id == selection_rectangle_id) continue;
 
@@ -50,11 +50,11 @@ void DebugLevelEditor::find_selection(FumoVec2 mouse_position) {
 }
 
 void DebugLevelEditor::move_screen_to_mouse(FumoVec2 mouse_position) {
-    fumo_engine->camera->target =
-        FumoVec2SmoothMoveTowards(
-            {fumo_engine->camera->target.x, fumo_engine->camera->target.y},
-            mouse_position,
-            18.5f)
+    fumo_engine->fumo_camera->camera.target =
+        FumoVec2SmoothMoveTowards({fumo_engine->fumo_camera->camera.target.x,
+                                   fumo_engine->fumo_camera->camera.target.y},
+                                  mouse_position,
+                                  18.5f)
             .to_raylib_vec2();
 }
 
@@ -150,6 +150,59 @@ void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
 
 template<>
 void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
+                                             ScreenTransitionLine& shape,
+                                             FumoVec2& mouse_position,
+                                             FumoVec2& body_position) {
+
+    FumoRect collision_bounds {
+        .x = body_position.x,
+        .y = body_position.y,
+        .width = FumoVec2Distance(shape.transition_line.start,
+                                  shape.transition_line.end),
+        .height = FumoVec2Distance(shape.transition_line.start,
+                                   shape.transition_line.end)};
+    FumoVec2 prev_position = body_position;
+
+    if (CheckCollisionPointLine(
+            mouse_position.to_raylib_vec2(),
+            (shape.transition_line.start + body_position).to_raylib_vec2(),
+            (shape.transition_line.end + body_position).to_raylib_vec2(),
+            1000.0f)
+        || entity_id == currently_selected_entity) {
+
+        if (IsKeyDown(KEY_SPACE)) {
+            body_position =
+                FumoVec2SmoothMoveTowards(body_position, mouse_position, 4.0f);
+        }
+
+        if (!(IsKeyDown(KEY_LEFT_SHIFT)) && IsKeyDown(KEY_LEFT_CONTROL)) {
+            FumoVec2 new_line_end =
+                (mouse_position - (shape.transition_line.end + body_position));
+
+            shape.transition_line.end += (new_line_end) / 3.0f;
+
+            if (FumoVec2Distance(shape.transition_line.start,
+                                 shape.transition_line.end)
+                < MINIMUM_OBJECT_SIZE) {
+                shape.transition_line.end = shape.transition_line.start
+                    + FumoVec2Normalize(shape.transition_line.end)
+                        * MINIMUM_OBJECT_SIZE;
+            }
+        }
+
+        auto& selection_rect = fumo_engine->ECS->get_component<OutlineRect>(
+            selection_rectangle_id);
+        selection_rect.outline_rect = collision_bounds;
+        auto& selection_body =
+            fumo_engine->ECS->get_component<Body>(selection_rectangle_id);
+        selection_body.position = {collision_bounds.x, collision_bounds.y};
+
+        currently_selected_entity = entity_id;
+    }
+}
+
+template<>
+void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
                                              ParallelGravityField& shape,
                                              FumoVec2& mouse_position,
                                              FumoVec2& body_position) {
@@ -166,17 +219,6 @@ void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
                                              FumoVec2& body_position) {
     DebugLevelEditor::find_selection_object(entity_id,
                                             shape.outline_rect,
-                                            mouse_position,
-                                            body_position);
-}
-
-template<>
-void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
-                                             ScreenTransitionRect& shape,
-                                             FumoVec2& mouse_position,
-                                             FumoVec2& body_position) {
-    DebugLevelEditor::find_selection_object(entity_id,
-                                            shape.transition_rect,
                                             mouse_position,
                                             body_position);
 }

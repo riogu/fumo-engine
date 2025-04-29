@@ -18,7 +18,7 @@
     XMACRO(MovedEventData) \
     XMACRO(Screen) \
     XMACRO(LevelId) \
-    XMACRO(ScreenTransitionRect) \
+    XMACRO(ScreenTransitionLine) \
     XMACRO(Line) \
     XMACRO(CollisionEventData) \
     XMACRO(EditorSelectedObject)

@@ -80,20 +80,18 @@ void CollisionRunner::check_collisions() {
 }
 
 #define CHECK_COLLISION(_SHAPE, query, function_name) \
-    do { \
-        if (fumo_engine->ECS->filter(obstacle_id, query)) { \
-            const auto& shape = \
-                fumo_engine->ECS->get_component<_SHAPE>(obstacle_id); \
-            Collision collision = \
-                Collisions::function_name(line, shape, obstacle_body); \
-            if (collision.collided \
-                && (collision.distance < closest_collision.distance \
-                    || closest_collision.distance == 0.0f)) { \
-                closest_collision = collision; \
-            } \
-            continue; \
+    if (fumo_engine->ECS->filter(obstacle_id, query)) { \
+        Collision collision = Collisions::function_name( \
+            line, \
+            fumo_engine->ECS->get_component<_SHAPE>(obstacle_id), \
+            fumo_engine->ECS->get_component<Body>(obstacle_id)); \
+        if (collision.collided \
+            && (collision.distance < closest_collision.distance \
+                || closest_collision.distance == 0.0f)) { \
+            closest_collision = collision; \
         } \
-    } while (0)
+        continue; \
+    }
 
 [[nodiscard]] const Collision
 CollisionRunner::check_raycast_line(const Line& line) {
@@ -109,9 +107,6 @@ CollisionRunner::check_raycast_line(const Line& line) {
         .component_filter = Filter::All};
 
     for (const auto& obstacle_id : sys_entities) {
-        const auto& obstacle_body =
-            fumo_engine->ECS->get_component<Body>(obstacle_id);
-
         CHECK_COLLISION(FumoRect, fumo_rect_query, LineToRectCollision);
         CHECK_COLLISION(Circle, circle_query, LineToCircleCollision);
     }

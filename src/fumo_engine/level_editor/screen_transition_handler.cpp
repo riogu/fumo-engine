@@ -6,6 +6,24 @@
 
 extern std::unique_ptr<FumoEngine> fumo_engine;
 
+[[nodiscard]] bool fumovec2_almost_equals(FumoVec2 p, FumoVec2 q) {
+    // Check whether two given vectors are almost equal
+
+#if defined(EPSILON)
+    #undef EPSILON
+    #define EPSILON 0.01f
+#endif
+
+    int result = ((fabsf(p.x - q.x))
+                  <= (EPSILON * fmaxf(1.0f, fmaxf(fabsf(p.x), fabsf(q.x)))))
+        && ((fabsf(p.y - q.y))
+            <= (EPSILON * fmaxf(1.0f, fmaxf(fabsf(p.y), fabsf(q.y)))));
+
+#undef EPSILON
+#define EPSILON 0.000001f
+    return result;
+}
+
 void ScreenTransitionHandler::check_for_screen_transition() {
     // FIXME: (current) test screen transition rects
     // and associate the camera to these new rectangles
@@ -18,55 +36,67 @@ void ScreenTransitionHandler::check_for_screen_transition() {
     auto& player_state =
         fumo_engine->ECS->get_component<EntityState>(fumo_engine->player_id);
 
-    if (Vector2Equals(
-            fumo_engine->camera->target,
-            fumo_engine->current_screen.screen_position.to_raylib_vec2())) {
-        fumo_engine->engine_state = EngineState::GAMEPLAY_RUNNING;
-    }
+    bool collided = false;
+
+    PRINT(fumo_engine->fumo_camera->camera.target.x)
+    PRINT(fumo_engine->fumo_camera->camera.target.y)
 
     // go through all ScreenTransitionRect
     for (const auto& entity_id : sys_entities) {
-        const auto& body = fumo_engine->ECS->get_component<Body>(entity_id);
-        const auto& transition_rect =
-            fumo_engine->ECS->get_component<ScreenTransitionRect>(entity_id);
+        auto& transition_line =
+            fumo_engine->ECS->get_component<ScreenTransitionLine>(entity_id);
 
-        const auto& collision =
-            Collisions::CapsuleToRectCollision(player_capsule,
-                                               player_body,
-                                               transition_rect.transition_rect,
-                                               body);
-        if (collision.overlap) {
-            // if overlap != 0, then there was a collision
-            fumo_engine->event_handler->add_event(
-                Event {.event = EVENT_::PLAYER_TRANSITIONED_SCREEN,
-                       .entity_id = player_id});
+        if (Collisions::LineToCapsuleCollided(
+                player_capsule,
+                player_body,
+                transition_line.transition_line,
+                fumo_engine->ECS->get_component<Body>(entity_id))) {
 
-            fumo_engine->ECS->replace_or_add_component(
-                entity_id,
-                transition_rect.next_screen);
-            // delay doing anything for the end of the frame
-            // (useful for multithreading later)
+            collided = true;
+
+            PRINT_NO_NAME("WE COLLIDED WITH LINE")
+
+            fumo_engine->engine_state = EngineState::GAMEPLAY_PAUSED;
+
+            if (fumo_engine->fumo_camera->last_transition_id != entity_id) {
+
+                // if (fumo_engine->fumo_camera->current_screen.screen_id
+                //     != transition_line.next_screen.screen_id) {
+                fumo_engine->fumo_camera->current_screen =
+                    transition_line.next_screen;
+                std::swap(transition_line.previous_screen,
+                          transition_line.next_screen);
+                // }
+            }
+
+            fumo_engine->fumo_camera->last_transition_id = entity_id;
         }
+    }
+    if (!collided) fumo_engine->fumo_camera->last_transition_id = -69;
+
+    if (fumovec2_almost_equals(
+            to_fumo_vec2(fumo_engine->fumo_camera->camera.target),
+            fumo_engine->fumo_camera->current_screen.screen_position)) {
+        fumo_engine->engine_state = EngineState::GAMEPLAY_RUNNING;
+    }
+
+    if (to_fumo_vec2(fumo_engine->fumo_camera->camera.target)
+        != fumo_engine->fumo_camera->current_screen.screen_position) {
+        UpdateCameraCenterSmoothFollow(
+            &fumo_engine->fumo_camera->camera,
+            fumo_engine->fumo_camera->current_screen.screen_position);
     }
 }
 
 namespace FumoEvent {
 
 void screen_transition(const Event& event) {
-
-    const auto& new_screen =
-        fumo_engine->ECS->get_component<Screen>(event.entity_id);
-    auto& entity_state =
-        fumo_engine->ECS->get_component<EntityState>(event.entity_id);
-
+    // const auto& new_screen =
+    //     fumo_engine->ECS->get_component<Screen>(event.entity_id);
     // do stuff to the camera here and all that
     // ...how tf do you do that
-    UpdateCameraCenterSmoothFollow(
-        fumo_engine->camera.get(),
-        Body {.position = new_screen.screen_position});
     // force the player to free in place until the camera is set
     // with a boolean or a disabling event
     // entity_state.is_changing_screens = true;
-    fumo_engine->engine_state = EngineState::GAMEPLAY_PAUSED;
 }
 } // namespace FumoEvent

@@ -24,7 +24,7 @@ void Circle::draw(const FumoColor& color, const FumoVec2& position) const {
 
 void CircularGravityField::draw(const FumoColor& color,
                                 const FumoVec2& position) const {
-    FumoDrawCircleV(position, position.y, FumoColorAlpha(color, 0.2f));
+    FumoDrawCircleV(position, radius, FumoColorAlpha(color, 0.2f));
 }
 
 void ParallelGravityField::draw(const FumoColor& color,
@@ -35,20 +35,24 @@ void ParallelGravityField::draw(const FumoColor& color,
 }
 
 void Line::draw(const FumoColor& color, const FumoVec2& position) const {
+    FumoDrawLineEx(start + position, end + position, LINE_THICKNESS, color);
+}
+
+void Line::_capsule_draw_line(const FumoColor& color) const {
     FumoDrawLineEx(start, end, LINE_THICKNESS, color);
 }
 
 void Capsule::draw(const FumoColor& color, const FumoVec2& position) const {
-    left_line.draw(color, position);
-    middle_line.draw(color, position);
-    right_line.draw(color, position);
+    left_line._capsule_draw_line(color);
+    middle_line._capsule_draw_line(color);
+    right_line._capsule_draw_line(color);
     FumoDrawCircleV(top_circle_center, radius, color);
     FumoDrawCircleV(bottom_circle_center, radius, color);
 }
 
-void ScreenTransitionRect::draw(const FumoColor& color,
+void ScreenTransitionLine::draw(const FumoColor& color,
                                 const FumoVec2& position) const {
-    transition_rect.draw(color, position);
+    transition_line.draw(color, position);
 }
 
 void OutlineRect::draw(const FumoColor& color, const FumoVec2& position) const {

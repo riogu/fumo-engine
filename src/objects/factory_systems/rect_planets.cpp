@@ -11,19 +11,24 @@ EntityId LevelEntityFactory::create_screen_transition(FumoVec2 position) {
 
     EntityId entity_id = fumo_engine->ECS->create_entity();
 
-    ScreenTransitionRect screen_transition_rect {
-        .transition_rect = make_default_ground_rect(position)};
+    ScreenTransitionLine screen_transition_rect {
+        .transition_line = {.end = {0.0f, 150.0f}},
+        .previous_screen =
+            Screen {.screen_id = 0, .screen_position = screenCenter},
+        .next_screen = Screen {
+            .screen_id = 1,
+            .screen_position = {screenCenter.x + screenWidth, screenCenter.y}}};
 
     fumo_engine->ECS->entity_add_component(entity_id, screen_transition_rect);
 
     fumo_engine->ECS->entity_add_component(entity_id,
                                            Render {.color = FUMO_BROWN});
 
-    fumo_engine->ECS->entity_add_component(
-        entity_id,
-        Body {.position = {screen_transition_rect.transition_rect.x,
-                           screen_transition_rect.transition_rect.y},
-              .velocity = {0.0f, 0.0f}});
+    fumo_engine->ECS->entity_add_component(entity_id,
+                                           Body {.position = position});
+
+    fumo_engine->ECS->entity_add_component(entity_id, Screen {0});
+    fumo_engine->ECS->entity_add_component(entity_id, LevelId {0});
 
     sys_entities.insert(entity_id);
 
@@ -57,7 +62,7 @@ EntityId LevelEntityFactory::create_outline_rect(FumoVec2 position) {
     FumoRect ground_fumo_rect = make_default_ground_rect(position);
     fumo_engine->ECS->entity_add_component(
         entity_id,
-        OutlineRect {.outline_rect = ground_fumo_rect});
+        OutlineRect {.outline_rect = {0.0f, 0.0f, screenWidth, screenHeight}});
 
     fumo_engine->ECS->entity_add_component(entity_id,
                                            Render {.color = FUMO_GREEN});

@@ -7,7 +7,11 @@ void debug_spawn_level_objects();
 ALL_COMPONENTS_X_MACRO()
 #undef XMACRO
 
-int count = 0;
+// int count = 0;
+// if (!count) [[unlikely]] {
+//     count++;
+//     debug_spawn_level_objects();
+// }
 
 std::unique_ptr<FumoEngine> fumo_engine;
 
@@ -15,7 +19,10 @@ int main(void) {
     Initialization::initialize_window();
     //--------------------------------------------------------------------------------------
     fumo_engine = std::make_unique<FumoEngine>();
-    fumo_engine->initialize(EngineMode::LEVEL_EDITING, EngineState::EDITING);
+
+    // fumo_engine->initialize(EngineMode::LEVEL_EDITING, EngineState::EDITING);
+    fumo_engine->initialize(EngineMode::GAMEPLAY,
+                            EngineState::GAMEPLAY_RUNNING);
     //--------------------------------------------------------------------------------------
     // must be done before fumo_engine->setup_game();
     Initialization::initialize_all_textures();
@@ -27,10 +34,6 @@ int main(void) {
     FumoSerializer::deserialize_levels();
     //--------------------------------------------------------------------------------------
 
-    // if (!count) [[unlikely]] {
-    //     count++;
-    //     debug_spawn_level_objects();
-    // }
     while (fumo_engine->engine_state != EngineState::SHOULD_CLOSE) {
         fumo_engine->frame_loop();
     }

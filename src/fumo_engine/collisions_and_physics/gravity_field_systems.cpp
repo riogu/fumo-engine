@@ -45,17 +45,16 @@ void GravityFieldHandler::find_gravity_field() {
                                                body_planet)) {
                 candidate_planets.push_back(planet_id);
             }
-        } else {
-            // methods for circular gravity fields
-            const auto& circular_field =
-                fumo_engine->ECS->get_component<CircularGravityField>(
-                    planet_id);
+            continue;
+        }
+        // methods for circular gravity fields
+        const auto& circular_field =
+            fumo_engine->ECS->get_component<CircularGravityField>(planet_id);
 
-            if (circular_field.is_inside_field(player_body,
-                                               player_capsule,
-                                               body_planet)) {
-                candidate_planets.push_back(planet_id);
-            }
+        if (circular_field.is_inside_field(player_body,
+                                           player_capsule,
+                                           body_planet)) {
+            candidate_planets.push_back(planet_id);
         }
     }
 

@@ -4,8 +4,8 @@
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 1068.767578125,
-            "value1": 386.2501220703125
+            "value0": 904.359130859375,
+            "value1": 574.3234252929688
         },
         "value2": {
             "value0": 0.0,
@@ -31,10 +31,10 @@
     },
     "OutlineRect": {
         "value0": {
-            "value0": 1089.9998779296876,
-            "value1": 427.49993896484377,
-            "value2": 832.4821166992188,
-            "value3": 98.74982452392578
+            "value0": 968.1073608398438,
+            "value1": 566.8243408203125,
+            "value2": 127.49993133544922,
+            "value3": 40.0
         }
     },
     "Screen": {
@@ -48,6 +48,115 @@
         "value0": 0
     },
     "entity_id": 2,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 940.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 0.0,
+        "value1": 940.0,
+        "value2": 3840.607177734375,
+        "value3": 141.82432556152345
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 3,
+    "component_mask": 574609,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 740.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 255,
+            "value1": 161,
+            "value2": 0,
+            "value3": 255
+        }
+    },
+    "ParallelGravityField": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 740.0,
+            "value2": 3838.683349609375,
+            "value3": 209.66778564453126
+        },
+        "value1": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value2": 900.0,
+        "value3": 0.0
+    },
+    "GravFieldFlag": {
+        "value0": 0
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "EditorSelectedObject": {
+        "value0": 0
+    },
+    "entity_id": 4,
     "component_mask": 51217,
     "Body": {
         "value0": 0.0,
@@ -95,13 +204,13 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 3,
-    "component_mask": 49713,
+    "entity_id": 5,
+    "component_mask": 51217,
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 0.0038450537249445917,
-            "value1": 703.7501220703125
+            "value0": 1920.0,
+            "value1": 0.0
         },
         "value2": {
             "value0": 0.0,
@@ -119,20 +228,19 @@
     },
     "Render": {
         "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
+            "value0": 0,
+            "value1": 228,
+            "value2": 48,
             "value3": 255
         }
     },
-    "FumoRect": {
-        "value0": 0.0,
-        "value1": 940.0,
-        "value2": 1920.0,
-        "value3": 200.0
-    },
-    "ColliderObjectFlag": {
-        "value0": 0
+    "OutlineRect": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 0.0,
+            "value2": 1920.0,
+            "value3": 1080.0
+        }
     },
     "Screen": {
         "value0": 0,
@@ -144,13 +252,205 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 4,
-    "component_mask": 50321,
+    "entity_id": 6,
+    "component_mask": 51217,
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 3.1824164390563967,
-            "value1": 353.18902587890627
+            "value0": 3840.0,
+            "value1": 0.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 228,
+            "value2": 48,
+            "value3": 255
+        }
+    },
+    "OutlineRect": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 0.0,
+            "value2": 1920.0,
+            "value3": 1080.0
+        }
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 7,
+    "component_mask": 51217,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 5760.0,
+            "value1": 0.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 228,
+            "value2": 48,
+            "value3": 255
+        }
+    },
+    "OutlineRect": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 0.0,
+            "value2": 1920.0,
+            "value3": 1080.0
+        }
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 8,
+    "component_mask": 51217,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 7680.0,
+            "value1": 0.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 228,
+            "value2": 48,
+            "value3": 255
+        }
+    },
+    "OutlineRect": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 0.0,
+            "value2": 1920.0,
+            "value3": 1080.0
+        }
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 9,
+    "component_mask": 51217,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 9600.0,
+            "value1": 0.0
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 228,
+            "value2": 48,
+            "value3": 255
+        }
+    },
+    "OutlineRect": {
+        "value0": {
+            "value0": 0.0,
+            "value1": 0.0,
+            "value2": 1920.0,
+            "value3": 1080.0
+        }
+    },
+    "Screen": {
+        "value0": 0,
+        "value1": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 10,
+    "component_mask": 574609,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 904.359130859375,
+            "value1": 574.3234252929688
         },
         "value2": {
             "value0": 0.0,
@@ -176,10 +476,10 @@
     },
     "ParallelGravityField": {
         "value0": {
-            "value0": 0.0,
-            "value1": 740.0,
-            "value2": 1912.525146484375,
-            "value3": 342.7118225097656
+            "value0": 968.1073608398438,
+            "value1": 566.8243408203125,
+            "value2": 127.49993133544922,
+            "value3": 40.0
         },
         "value1": {
             "value0": 0.0,
@@ -201,13 +501,16 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 8,
-    "component_mask": 574001,
+    "EditorSelectedObject": {
+        "value0": 0
+    },
+    "entity_id": 11,
+    "component_mask": 114705,
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 1068.767578125,
-            "value1": 386.2501220703125
+            "value0": 1920.244873046875,
+            "value1": 797.333251953125
         },
         "value2": {
             "value0": 0.0,
@@ -225,20 +528,11 @@
     },
     "Render": {
         "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
+            "value0": 127,
+            "value1": 106,
+            "value2": 79,
             "value3": 255
         }
-    },
-    "FumoRect": {
-        "value0": 1089.9998779296876,
-        "value1": 427.49993896484377,
-        "value2": 832.4821166992188,
-        "value3": 98.74982452392578
-    },
-    "ColliderObjectFlag": {
-        "value0": 0
     },
     "Screen": {
         "value0": 0,
@@ -250,7 +544,30 @@
     "LevelId": {
         "value0": 0
     },
-    "EditorSelectedObject": {
-        "value0": 0
+    "ScreenTransitionLine": {
+        "value0": {
+            "value0": {
+                "value0": 0.0,
+                "value1": 0.0
+            },
+            "value1": {
+                "value0": -0.6884368658065796,
+                "value1": 158.66671752929688
+            }
+        },
+        "value1": {
+            "value0": 0,
+            "value1": {
+                "value0": 960.0,
+                "value1": 540.0
+            }
+        },
+        "value2": {
+            "value0": 1,
+            "value1": {
+                "value0": 2880.0,
+                "value1": 540.0
+            }
+        }
     }
 }

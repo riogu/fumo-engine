@@ -8,6 +8,12 @@
 #include "fumo_engine/screen_components.hpp"
 #include "fumo_engine/sprite_animation_manager/sprite_and_animation_systems.hpp"
 
+struct FumoCamera {
+    Camera2D camera {};
+    Screen current_screen {.screen_id = 43, .screen_position = screenCenter};
+    EntityId last_transition_id = -43;
+};
+
 class FumoEngine {
   public:
     float frametime;
@@ -15,15 +21,13 @@ class FumoEngine {
 
     std::unique_ptr<SpriteManager> sprite_manager;
 
-    std::unique_ptr<Camera2D> camera;
+    std::unique_ptr<FumoCamera> fumo_camera;
 
     std::unique_ptr<EntityEventHandler> event_handler;
 
     EntityId player_id;
     // NOTE: storing the player id globally for now for optimisation
     // this isnt necessary, and can be removed completely later.
-
-    Screen current_screen {};
 
     EngineState engine_state {};
 
