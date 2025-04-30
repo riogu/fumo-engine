@@ -48,12 +48,12 @@ void register_systems_scheduled() {
         ->add_unregistered_system<GravityUpdater,
                                   2,
                                   SystemMode::GAMEPLAY_RUNNING_ONLY>();
-    fumo_engine->ECS
-        ->register_system_unscheduled<LevelSerializer, SystemMode::ALWAYS_RUN>(
-            EntityQuery {
-                .component_mask =
-                    fumo_engine->ECS->make_component_mask<LevelId, Screen>(),
-                .component_filter = Filter::All});
+    fumo_engine->ECS->register_system_unscheduled<LevelSerializer,
+                                                  SystemMode::ALWAYS_RUN>(
+        EntityQuery {
+            .component_mask =
+                fumo_engine->ECS->make_component_mask<LevelId, Serialized>(),
+            .component_filter = Filter::All});
 
     fumo_engine->ECS->register_system<GravityFieldHandler,
                                       3,
@@ -85,8 +85,16 @@ void register_systems_scheduled() {
         EntityQuery {
             .component_mask =
                 fumo_engine->ECS
-                    ->make_component_mask<Body, ScreenTransitionLine>(),
+                    ->make_component_mask<Body, ScreenTransitionData>(),
             .component_filter = Filter::All});
+
+    fumo_engine->ECS
+        ->register_system<ScreenTransitionUpdater, 6, SystemMode::EDITING_ONLY>(
+            EntityQuery {
+                .component_mask =
+                    fumo_engine->ECS
+                        ->make_component_mask<Screen, Serialized, LevelId>(),
+                .component_filter = Filter::Only});
 
     fumo_engine->ECS->register_system<DebugLevelEditor,
                                       MAX_PRIORITY - 1,
@@ -94,7 +102,7 @@ void register_systems_scheduled() {
         .component_mask =
             fumo_engine->ECS->make_component_mask<GravFieldFlag,
                                                   ColliderObjectFlag,
-                                                  ScreenTransitionLine>(),
+                                                  ScreenTransitionData>(),
         .component_filter = Filter::Any});
     // fumo_engine->ECS->register_system<TimerHandler, 7>(
     //     EntityQuery{.component_mask = fumo_engine->ECS->make_component_mask<Timer>(),

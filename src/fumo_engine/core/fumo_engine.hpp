@@ -33,15 +33,7 @@ class FumoEngine {
 
     EngineMode engine_mode {};
 
-    void initialize(EngineMode mode, EngineState state) {
-        engine_state = state;
-        engine_mode = mode;
-
-        ECS = std::make_shared<SchedulerECS>();
-        ECS->initialize();
-        sprite_manager = std::make_unique<SpriteManager>();
-        event_handler = std::make_unique<EntityEventHandler>();
-    }
+    void initialize(EngineMode mode, EngineState state);
 
     void handle_events() { event_handler->handle_events(); }
 

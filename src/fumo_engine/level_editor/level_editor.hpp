@@ -52,7 +52,7 @@ struct LevelEditorGUI {
     XMACRO(ParallelGravityField) \
     XMACRO(CircularGravityField) \
     XMACRO(OutlineRect) \
-    XMACRO(ScreenTransitionLine)
+    XMACRO(ScreenTransitionData)
 
 #define XMACRO(Type) \
     template<> \

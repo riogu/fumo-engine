@@ -29,19 +29,23 @@ void SchedulerECS::debug_print() {
     // std::cerr << '\n' << '\n';
 }
 
-// void SchedulerECS::debug_print_scheduler() {
-//     PRINT(system_scheduler);
-//     PRINT(all_scheduled_unregistered_systems_debug);
-//     for (auto const& pair : all_scheduled_unregistered_systems_debug) {
-//         auto const& t_name = pair.first;
-//         auto const& system = pair.second;
-//         std::cerr << libassert::highlight_stringify(t_name) << " -----> "
-//                   << libassert::highlight_stringify(system->priority) << '\n';
-//     }
-//     for (auto const& pair : all_scheduled_systems_debug) {
-//         auto const& t_name = pair.first;
-//         auto const& system = pair.second;
-//         std::cerr << libassert::highlight_stringify(t_name) << " -----> "
-//                   << libassert::highlight_stringify(system->priority) << '\n';
-//     }
-// }
+void SchedulerECS::debug_print_scheduler() {
+    PRINT(system_scheduler);
+    PRINT(all_scheduled_unregistered_systems_debug);
+    for (auto const& pair : all_scheduled_unregistered_systems_debug) {
+        auto const& t_name = pair.first;
+        auto const& system = pair.second;
+        std::cerr << libassert::highlight_stringify(t_name) << " -----> "
+                  << libassert::highlight_stringify(system->priority)
+                  << libassert::highlight_stringify(system->system_mode)
+                  << '\n';
+    }
+    for (auto const& pair : all_scheduled_systems_debug) {
+        auto const& t_name = pair.first;
+        auto const& system = pair.second;
+        std::cerr << libassert::highlight_stringify(t_name) << " -----> "
+                  << libassert::highlight_stringify(system->priority)
+                  << libassert::highlight_stringify(system->system_mode)
+                  << '\n';
+    }
+}

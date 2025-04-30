@@ -1,10 +1,9 @@
 #include "fumo_engine/collisions_and_physics/collision_functions.hpp"
 #include "fumo_engine/core/fumo_engine.hpp"
+extern std::unique_ptr<FumoEngine> fumo_engine;
 #include "fumo_engine/level_editor/screen_handler.hpp"
 #include "fumo_engine/screen_components.hpp"
 #include "main_functions.hpp"
-
-extern std::unique_ptr<FumoEngine> fumo_engine;
 
 [[nodiscard]] bool fumovec2_almost_equals(FumoVec2 p, FumoVec2 q) {
     // Check whether two given vectors are almost equal
@@ -38,13 +37,20 @@ void ScreenTransitionHandler::check_for_screen_transition() {
 
     bool collided = false;
 
-    PRINT(fumo_engine->fumo_camera->camera.target.x)
-    PRINT(fumo_engine->fumo_camera->camera.target.y)
+    // PRINT(fumo_engine->fumo_camera->camera.target.x)
+    // PRINT(fumo_engine->fumo_camera->camera.target.y)
+
+    const auto& screen_updater =
+        fumo_engine->ECS->get_system<ScreenTransitionUpdater>();
 
     // go through all ScreenTransitionRect
     for (const auto& entity_id : sys_entities) {
         auto& transition_line =
-            fumo_engine->ECS->get_component<ScreenTransitionLine>(entity_id);
+            fumo_engine->ECS->get_component<ScreenTransitionData>(entity_id);
+        // assign the correct screens to the screen transition line based
+        // on the which ones are closer (and assigned direction)
+
+        // screen_updater->update_screen_id(entity_id);
 
         if (Collisions::LineToCapsuleCollided(
                 player_capsule,
@@ -54,7 +60,7 @@ void ScreenTransitionHandler::check_for_screen_transition() {
 
             collided = true;
 
-            PRINT_NO_NAME("WE COLLIDED WITH LINE")
+            // PRINT_NO_NAME("WE COLLIDED WITH LINE")
 
             fumo_engine->engine_state = EngineState::GAMEPLAY_PAUSED;
 
@@ -72,6 +78,7 @@ void ScreenTransitionHandler::check_for_screen_transition() {
             fumo_engine->fumo_camera->last_transition_id = entity_id;
         }
     }
+
     if (!collided) fumo_engine->fumo_camera->last_transition_id = -69;
 
     if (fumovec2_almost_equals(

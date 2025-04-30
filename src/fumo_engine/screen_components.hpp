@@ -7,6 +7,13 @@
 #include "fumo_serialize_macros.hpp"
 constexpr uint64_t MAX_SCREENS = 256;
 
+struct Serialized {
+    // temporary name for the way we are serializing stuff
+    uint64_t file_id {};
+
+    SERIALIZE(file_id);
+};
+
 struct Screen {
     // tells us what screen an entity belongs to
     // (wrapping an int with type information)
@@ -22,10 +29,11 @@ struct LevelId {
     SERIALIZE(level_id)
 };
 
-struct ScreenTransitionLine {
+struct ScreenTransitionData {
     Line transition_line;
     Screen previous_screen;
     Screen next_screen;
+    DIRECTION transition_direction;
     SERIALIZE(transition_line, previous_screen, next_screen);
     void draw(const FumoColor& color, const FumoVec2& position) const;
 };

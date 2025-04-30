@@ -20,8 +20,10 @@ void FumoEngine::setup_game() {
     // camera->target = player_body.position;
     fumo_camera->camera.target = screenCenter.to_raylib_vec2();
     fumo_camera->camera.rotation = 0.0f;
+
     fumo_camera->camera.zoom =
         engine_mode == EngineMode::LEVEL_EDITING ? 0.4f : 1.0f;
+
     fumo_camera->camera.offset = screenCenter.to_raylib_vec2();
 
     auto& player_animation = ECS->get_component<AnimationInfo>(player_id);
@@ -41,7 +43,7 @@ void FumoEngine::setup_game() {
     //
     // selected_render.color = FUMO_GOLD;
     //
-    // ECS->entity_add_component(selected_rect_id, EditorSelectedObject {});
+    // ECS->entity_add_components(selected_rect_id, EditorSelectedObject {});
     //
     // level_editor->selection_rectangle_id = selected_rect_id;
 }

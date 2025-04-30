@@ -17,7 +17,8 @@ void DebugLevelEditor::handle_input() {
 
     find_selection(mouse_position);
     // if (IsKeyPressed(KEY_P)) reset_position();
-
+    // FIXME: add spawning grav fields in all directions in rectangles
+    if (IsKeyPressed(KEY_Q)) fumo_engine->ECS->debug_print_scheduler();
     if (IsKeyDown(KEY_LEFT_SHIFT) && IsKeyPressed(KEY_S)) save_level();
     if (IsKeyPressed(KEY_D)) delete_planet(mouse_position);
     if (IsKeyDown(KEY_LEFT_ALT)) move_screen_to_mouse(mouse_position);

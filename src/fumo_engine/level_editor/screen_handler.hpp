@@ -8,16 +8,17 @@ struct ScreenTransitionHandler: System {
     void check_for_screen_transition();
 };
 
-struct ScreenUpdater: System {
+struct ScreenTransitionUpdater: System {
     // NOTE: i should be able to click a menu button and type down a screen number
     // and move whatever entity i selected to that screen by doing this
     // (since it will be relative)
     //
-    void sys_call() override { update_screen_ids(); }
+    void sys_call() override { update_all_screen_ids(); }
+
+    void update_all_screen_ids();
 
     // FIXME: current |
     // continuously sweep the game and update the screen id
     // as i build the levels (so i dont have to manually state it)
-    void update_screen_ids();
-    // responsible for updating the ScreenId and LevelId on "Ctrl + S"
+    void update_screen_id(const EntityId& transition_line_id);
 };

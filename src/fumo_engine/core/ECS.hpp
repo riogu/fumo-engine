@@ -49,6 +49,12 @@ class ECS {
         component_manager->register_component<T>();
     }
 
+    void entity_component_mask_changed(EntityId entity_id,
+                                       ComponentMask component_mask) {
+        system_manager->entity_component_mask_changed(entity_id,
+                                                      component_mask);
+    }
+
     template<typename T>
     void entity_add_component(EntityId entity_id, T component) {
         // tell the component manager to add this entity_id associated to this
@@ -59,15 +65,7 @@ class ECS {
         // add the component
         entity_manager->add_to_component_mask(entity_id, component_id);
 
-        // NOTE: this is slightly slower for clarity, this method can be merged
-        // so you dont have to call "get component mask" after the call
-        ComponentMask component_mask =
-            entity_manager->get_component_mask(entity_id);
-
-        // notify the systems of the change
-        // NOTE: change this so it wont notify systems until the end of the frame
-        system_manager->entity_component_mask_changed(entity_id,
-                                                      component_mask);
+        // NOTE: you can now add multiple components at once
     }
 
     template<typename T> // remove from entity

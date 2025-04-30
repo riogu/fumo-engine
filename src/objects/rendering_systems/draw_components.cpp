@@ -50,7 +50,7 @@ void Capsule::draw(const FumoColor& color, const FumoVec2& position) const {
     FumoDrawCircleV(bottom_circle_center, radius, color);
 }
 
-void ScreenTransitionLine::draw(const FumoColor& color,
+void ScreenTransitionData::draw(const FumoColor& color,
                                 const FumoVec2& position) const {
     transition_line.draw(color, position);
 }

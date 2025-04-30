@@ -17,7 +17,7 @@ ALL_COMPONENTS_X_MACRO()
     XMACRO(ParallelGravityField) \
     XMACRO(CircularGravityField) \
     XMACRO(OutlineRect) \
-    XMACRO(ScreenTransitionLine) \
+    XMACRO(ScreenTransitionData) \
     XMACRO(Line)
 
 void ComponentRenderer::draw_all_components() {

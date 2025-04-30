@@ -41,8 +41,8 @@ void DebugLevelEditor::find_selection(FumoVec2 mouse_position) {
         }
         if (!fumo_engine->ECS->filter(currently_selected_entity,
                                       EditorSelectedObject_query)) {
-            fumo_engine->ECS->entity_add_component(currently_selected_entity,
-                                                   EditorSelectedObject {});
+            fumo_engine->ECS->entity_add_components(currently_selected_entity,
+                                                    EditorSelectedObject {});
         }
     }
 
@@ -150,7 +150,7 @@ void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
 
 template<>
 void DebugLevelEditor::find_selection_object(const EntityId& entity_id,
-                                             ScreenTransitionLine& shape,
+                                             ScreenTransitionData& shape,
                                              FumoVec2& mouse_position,
                                              FumoVec2& body_position) {
 

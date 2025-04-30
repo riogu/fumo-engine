@@ -16,12 +16,13 @@
     XMACRO(OutlineRect) \
     XMACRO(EntityState) \
     XMACRO(MovedEventData) \
-    XMACRO(Screen) \
+    XMACRO(Serialized) \
     XMACRO(LevelId) \
-    XMACRO(ScreenTransitionLine) \
+    XMACRO(ScreenTransitionData) \
     XMACRO(Line) \
     XMACRO(CollisionEventData) \
-    XMACRO(EditorSelectedObject)
+    XMACRO(EditorSelectedObject) \
+    XMACRO(Screen)
 
 #define XMACRO(Type) Type,
 enum struct AllComponentTypes { ALL_COMPONENTS_X_MACRO() };

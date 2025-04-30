@@ -64,7 +64,7 @@ void load_player_textures() {
 // void func() {
 //     // AnimationInfo parameters are optional and we should only touch the
 //     // "frame_speed" variable for customizing the animation
-//     fumo_engine->ECS->entity_add_component(fumo_engine->player_id, AnimationInfo{});
+//     fumo_engine->ECS->entity_add_components(fumo_engine->player_id, AnimationInfo{});
 //
 //     const auto& animation_player = fumo_engine->ECS->get_system<AnimationPlayer>();
 //

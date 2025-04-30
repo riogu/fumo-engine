@@ -23,7 +23,6 @@ class SchedulerECS {
     std::multiset<std::shared_ptr<System>, SystemCompare>
         unregistered_system_scheduler {};
 
-    std::multiset<std::shared_ptr<System>, SystemCompare> copy_scheduler {};
     //------------------------------------------------------------------
     std::unique_ptr<ECS> ecs;
 
@@ -48,7 +47,9 @@ class SchedulerECS {
         // we copy every frame, so that changes to the
         // scheduler only apply on the next loop iteration
         // unregistered systems go first right now
-        copy_scheduler = unregistered_system_scheduler;
+
+        std::multiset<std::shared_ptr<System>, SystemCompare> copy_scheduler(
+            unregistered_system_scheduler);
         copy_scheduler.insert(system_scheduler.begin(), system_scheduler.end());
         // run unregistered systems
         // and run registered systems
@@ -124,22 +125,30 @@ class SchedulerECS {
     // TODO: consider adding components in bulk when creating entities
     // to minimize the number of update calls we make to systems (this really
     // would help)
-    template<typename T>
-    void entity_add_component(const EntityId& entity_id, T component) {
-        // scheduler.scheduled_entity_component_masks[entity_id] =
-        ecs->entity_add_component(entity_id, component);
+    // template<typename T>
+    // void entity_add_components(const EntityId& entity_id, T component) {
+    //     // scheduler.scheduled_entity_component_masks[entity_id] =
+    //     ecs->entity_add_components(entity_id, component);
+    // }
+
+    template<typename... Types>
+
+    void entity_add_components(const EntityId& entity_id, Types... components) {
+        (ecs->entity_add_component(entity_id, components), ...);
+
+        ecs->entity_component_mask_changed(entity_id,
+                                           get_component_mask(entity_id));
     }
 
     template<typename T>
     void replace_or_add_component(const EntityId& entity_id, T component) {
-
         if (filter(entity_id,
                    EntityQuery {.component_mask = make_component_mask<T>(),
                                 .component_filter = Filter::All})) {
             ecs->replace_component(entity_id, component);
             return;
         }
-        entity_add_component(entity_id, component);
+        entity_add_components(entity_id, component);
     }
 
     template<typename T> // remove from entity

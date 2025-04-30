@@ -9,6 +9,7 @@ FumoVec2 starter_position = {0.0f, screenCenter.y + 400};
 float previous_width = 500.0f;
 
 FumoVec2 screenborders_position = {0.0f, 0.0f};
+uint64_t curr_id = 0;
 
 void make_some_rects();
 void screen_border_lines();
@@ -38,23 +39,45 @@ void debug_spawn_level_objects() {
                                                                   + 1);
         rect_field.field_fumo_rect.width = rect_planet.width;
     }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+        fumo_engine->ECS->entity_add_components(
+            fumo_engine->ECS->create_entity(),
+            Screen {.screen_id = curr_id++,
+                    .screen_position = screenborders_position + screenCenter},
+            Serialized {.file_id = 0},
+            LevelId {.level_id = 0});
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
+        fumo_engine->ECS->get_component<Body>(id_planet).position =
+            screenborders_position;
+        fumo_engine->ECS->entity_add_components(
+            fumo_engine->ECS->create_entity(),
+            Screen {.screen_id = curr_id++,
+                    .screen_position = screenborders_position + screenCenter},
+            Serialized {.file_id = 0},
+            LevelId {.level_id = 0});
+    }
+    {
+        EntityId id_planet =
+            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
+        screenborders_position.x += screenWidth;
 
-    {
-        EntityId id_planet =
-            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
-    }
-    {
-        EntityId id_planet =
-            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
         fumo_engine->ECS->get_component<Body>(id_planet).position =
             screenborders_position;
-    }
-    {
-        EntityId id_planet =
-            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
-        screenborders_position.x += screenWidth;
-        fumo_engine->ECS->get_component<Body>(id_planet).position =
-            screenborders_position;
+
+        fumo_engine->ECS->entity_add_components(
+            fumo_engine->ECS->create_entity(),
+            Screen {.screen_id = curr_id++,
+                    .screen_position = screenborders_position + screenCenter},
+            Serialized {.file_id = 0},
+            LevelId {.level_id = 0});
     }
     {
         EntityId id_planet =
@@ -62,6 +85,12 @@ void debug_spawn_level_objects() {
         screenborders_position.x += screenWidth;
         fumo_engine->ECS->get_component<Body>(id_planet).position =
             screenborders_position;
+        fumo_engine->ECS->entity_add_components(
+            fumo_engine->ECS->create_entity(),
+            Screen {.screen_id = curr_id++,
+                    .screen_position = screenborders_position + screenCenter},
+            Serialized {.file_id = 0},
+            LevelId {.level_id = 0});
     }
     {
         EntityId id_planet =
@@ -69,13 +98,12 @@ void debug_spawn_level_objects() {
         screenborders_position.x += screenWidth;
         fumo_engine->ECS->get_component<Body>(id_planet).position =
             screenborders_position;
-    }
-    {
-        EntityId id_planet =
-            planet_factory->create_outline_rect(FumoVec2 {0.0f, 0.0f});
-        screenborders_position.x += screenWidth;
-        fumo_engine->ECS->get_component<Body>(id_planet).position =
-            screenborders_position;
+        fumo_engine->ECS->entity_add_components(
+            fumo_engine->ECS->create_entity(),
+            Screen {.screen_id = curr_id++,
+                    .screen_position = screenborders_position + screenCenter},
+            Serialized {.file_id = 0},
+            LevelId {.level_id = 0});
     }
 }
 
@@ -85,7 +113,7 @@ void screen_border_lines() {
 
     {
         EntityId id_planet = planet_factory->create_rect(starter_position);
-        fumo_engine->ECS->entity_add_component(id_planet, OutlineRect {});
+        fumo_engine->ECS->entity_add_components(id_planet, OutlineRect {});
 
         FumoRect& outline_rect =
             fumo_engine->ECS->get_component<FumoRect>(id_planet);
@@ -96,7 +124,7 @@ void screen_border_lines() {
     }
     {
         EntityId id_planet = planet_factory->create_rect(starter_position);
-        fumo_engine->ECS->entity_add_component(id_planet, OutlineRect {});
+        fumo_engine->ECS->entity_add_components(id_planet, OutlineRect {});
 
         FumoRect& outline_rect =
             fumo_engine->ECS->get_component<FumoRect>(id_planet);
@@ -107,7 +135,7 @@ void screen_border_lines() {
     }
     {
         EntityId id_planet = planet_factory->create_rect(starter_position);
-        fumo_engine->ECS->entity_add_component(id_planet, OutlineRect {});
+        fumo_engine->ECS->entity_add_components(id_planet, OutlineRect {});
 
         FumoRect& outline_rect =
             fumo_engine->ECS->get_component<FumoRect>(id_planet);
@@ -118,7 +146,7 @@ void screen_border_lines() {
     }
     {
         EntityId id_planet = planet_factory->create_rect(starter_position);
-        fumo_engine->ECS->entity_add_component(id_planet, OutlineRect {});
+        fumo_engine->ECS->entity_add_components(id_planet, OutlineRect {});
 
         FumoRect& outline_rect =
             fumo_engine->ECS->get_component<FumoRect>(id_planet);

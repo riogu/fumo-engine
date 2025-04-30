@@ -6,7 +6,6 @@
 #include "fumo_engine/all_components_macro.hpp"
 #include "fumo_engine/core/fumo_engine.hpp"
 #include "fumo_engine/screen_components.hpp"
-#include "objects/factory_systems/factory_systems.hpp"
 
 extern std::unique_ptr<FumoEngine> fumo_engine;
 
@@ -74,7 +73,8 @@ void LevelSerializer::serialize_levels() {
         // FIXME: add Screen to each entity instead of the screenId
 
         // ---------------------------------------------------------------------
-        const auto& screen = fumo_engine->ECS->get_component<Screen>(entity_id);
+        const auto& screen =
+            fumo_engine->ECS->get_component<Serialized>(entity_id);
         const auto& level_id =
             fumo_engine->ECS->get_component<LevelId>(entity_id);
         // ---------------------------------------------------------------------
@@ -82,7 +82,7 @@ void LevelSerializer::serialize_levels() {
         fs::path level_screen_path = std::format("level{}", level_id.level_id);
         fs::create_directory(level_screen_path);
 
-        level_screen_path /= std::format("screen{}.json", screen.screen_id);
+        level_screen_path /= std::format("screen{}.json", screen.file_id);
 
         std::ofstream out_stream(level_screen_path, std::ios::app);
 
@@ -115,7 +115,7 @@ void LevelSerializer::serialize_levels() {
 namespace FumoSerializer {
 
 #define DESERIALIZE_COMPONENT(Type) \
-    fumo_engine->ECS->entity_add_component( \
+    fumo_engine->ECS->entity_add_components( \
         entity_id, \
         FumoSerializer::deserialize_component<Type>(#Type, \
                                                     component_id, \

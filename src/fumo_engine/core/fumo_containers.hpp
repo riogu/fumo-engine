@@ -22,7 +22,7 @@ class NamedComponentContainer {
     void add_component_by_name(std::string_view entity_name, U component) {
 
         EntityId entity_id = fumo_engine->ECS->create_entity();
-        fumo_engine->ECS->entity_add_component(entity_id, component);
+        fumo_engine->ECS->entity_add_components(entity_id, component);
 
         add_entity_id<U>(entity_id, entity_name);
     }
