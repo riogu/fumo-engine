@@ -24,8 +24,6 @@ extern std::unique_ptr<FumoEngine> fumo_engine;
 }
 
 void ScreenTransitionHandler::check_for_screen_transition() {
-    // FIXME: (current) test screen transition rects
-    // and associate the camera to these new rectangles
 
     const auto& player_id = fumo_engine->player_id;
     const auto& player_capsule =
@@ -60,7 +58,7 @@ void ScreenTransitionHandler::check_for_screen_transition() {
 
             collided = true;
 
-            // PRINT_NO_NAME("WE COLLIDED WITH LINE")
+            PRINT_NO_NAME("WE COLLIDED WITH LINE", "YEAH")
 
             fumo_engine->engine_state = EngineState::GAMEPLAY_PAUSED;
 

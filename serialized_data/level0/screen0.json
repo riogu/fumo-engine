@@ -4,8 +4,8 @@
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 7636.78173828125,
-            "value1": 778.4938354492188
+            "value0": 1110.389892578125,
+            "value1": 674.91162109375
         },
         "value2": {
             "value0": 0.0,
@@ -31,10 +31,10 @@
     },
     "OutlineRect": {
         "value0": {
-            "value0": 7636.78173828125,
-            "value1": 778.4938354492188,
-            "value2": 125.27162170410156,
-            "value3": 125.27162170410156
+            "value0": 898.5425415039063,
+            "value1": 314.0931396484375,
+            "value2": 607.1298217773438,
+            "value3": 50.9592170715332
         }
     },
     "Serialized": {
@@ -441,8 +441,8 @@
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 1900.01025390625,
-            "value1": 760.0001220703125
+            "value0": 1907.736572265625,
+            "value1": 807.3179931640625
         },
         "value2": {
             "value0": 0.0,
@@ -479,8 +479,8 @@
                 "value1": 0.0
             },
             "value1": {
-                "value0": 102.92118072509766,
-                "value1": 97.86988830566406
+                "value0": 0.40872693061828616,
+                "value1": 129.94557189941407
             }
         },
         "value1": {
@@ -560,7 +560,7 @@
             }
         }
     },
-    "entity_id": 18,
+    "entity_id": 16,
     "component_mask": 50449,
     "Body": {
         "value0": 0.0,
@@ -611,7 +611,7 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 19,
+    "entity_id": 17,
     "component_mask": 49683,
     "Body": {
         "value0": 0.0,
@@ -653,7 +653,7 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 20,
+    "entity_id": 18,
     "component_mask": 49683,
     "Body": {
         "value0": 0.0,
@@ -695,7 +695,7 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 25,
+    "entity_id": 19,
     "component_mask": 50449,
     "Body": {
         "value0": 0.0,
@@ -746,7 +746,7 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 26,
+    "entity_id": 20,
     "component_mask": 49683,
     "Body": {
         "value0": 0.0,
@@ -788,13 +788,13 @@
     "LevelId": {
         "value0": 0
     },
-    "entity_id": 28,
+    "entity_id": 21,
     "component_mask": 114705,
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 5739.92431640625,
-            "value1": 764.806640625
+            "value0": 5749.650390625,
+            "value1": 781.9127197265625
         },
         "value2": {
             "value0": 0.0,
@@ -831,8 +831,8 @@
                 "value1": 0.0
             },
             "value1": {
-                "value0": 49.998695373535159,
-                "value1": 144.99990844726563
+                "value0": 5.070641040802002,
+                "value1": 157.10202026367188
             }
         },
         "value1": {
@@ -850,13 +850,13 @@
             }
         }
     },
-    "entity_id": 29,
-    "component_mask": 638993,
+    "entity_id": 22,
+    "component_mask": 114705,
     "Body": {
         "value0": 0.0,
         "value1": {
-            "value0": 7636.78173828125,
-            "value1": 778.4938354492188
+            "value0": 7668.9580078125,
+            "value1": 747.244873046875
         },
         "value2": {
             "value0": 0.0,
@@ -893,8 +893,8 @@
                 "value1": 0.0
             },
             "value1": {
-                "value0": 60.603878021240237,
-                "value1": 109.63644409179688
+                "value0": -16.138269424438478,
+                "value1": 223.75619506835938
             }
         },
         "value1": {
@@ -911,6 +911,651 @@
                 "value1": 540.0
             }
         }
+    },
+    "entity_id": 23,
+    "component_mask": 50449,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 1394.1002197265626,
+            "value1": 388.85626220703127
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 121,
+            "value2": 241,
+            "value3": 255
+        }
+    },
+    "CircularGravityField": {
+        "value0": 116.92304992675781,
+        "value1": 900.0,
+        "value2": {
+            "value0": 1401.7879638671876,
+            "value1": 384.240966796875
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 24,
+    "component_mask": 50449,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 5028.80078125,
+            "value1": 322.09686279296877
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 121,
+            "value2": 241,
+            "value3": 255
+        }
+    },
+    "CircularGravityField": {
+        "value0": 360.0235595703125,
+        "value1": 900.0,
+        "value2": {
+            "value0": 5028.80078125,
+            "value1": 322.09686279296877
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 25,
+    "component_mask": 49683,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 5028.80078125,
+            "value1": 322.09686279296877
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Circle": {
+        "value0": 168.57130432128907
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 121,
+            "value2": 241,
+            "value3": 255
+        }
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 26,
+    "component_mask": 49683,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 4166.009765625,
+            "value1": 348.16998291015627
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Circle": {
+        "value0": 83.14884185791016
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 121,
+            "value2": 241,
+            "value3": 255
+        }
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 27,
+    "component_mask": 50449,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 4165.943359375,
+            "value1": 347.81109619140627
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 0,
+            "value1": 121,
+            "value2": 241,
+            "value3": 255
+        }
+    },
+    "CircularGravityField": {
+        "value0": 175.23843383789063,
+        "value1": 900.0,
+        "value2": {
+            "value0": 4165.943359375,
+            "value1": 347.81109619140627
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 28,
+    "component_mask": 574001,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 4282.6533203125,
+            "value1": 579.2987060546875
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 4457.3720703125,
+        "value1": 590.6682739257813,
+        "value2": 772.2960815429688,
+        "value3": 148.5597686767578
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "EditorSelectedObject": {
+        "value0": 0
+    },
+    "entity_id": 29,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 3051.65771484375,
+            "value1": 667.8112182617188
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 3051.65771484375,
+        "value1": 667.8112182617188,
+        "value2": 937.1436767578125,
+        "value3": 82.85628509521485
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 30,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 1854.515380859375,
+            "value1": -0.3310052752494812
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 2083.086181640625,
+        "value1": 127.81109619140625,
+        "value2": 142.85646057128907,
+        "value3": 739.5706787109375
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 31,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": -19.58431625366211,
+            "value1": -159.56362915039063
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 70.9635009765625,
+        "value1": -158.21234130859376,
+        "value2": 9625.1650390625,
+        "value3": 154.55604553222657
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 32,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 3773.244140625,
+            "value1": -123.07682800292969
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 3750.44140625,
+        "value1": 102.4248046875,
+        "value2": 114.39404296875,
+        "value3": 821.0032958984375
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 33,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 5710.44140625,
+            "value1": -41.32170867919922
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 5640.44189453125,
+        "value1": 147.4248046875,
+        "value2": 110.00147247314453,
+        "value3": 667.4930419921875
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 34,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 7617.560546875,
+            "value1": -141.54527282714845
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 6970.44189453125,
+        "value1": 342.4248046875,
+        "value2": 113.06444549560547,
+        "value3": 760.4568481445313
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 35,
+    "component_mask": 49713,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 9545.44921875,
+            "value1": -152.19180297851563
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 9999.7333984375,
+        "value1": 424.953857421875,
+        "value2": 117.39263153076172,
+        "value3": 737.9923706054688
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
+    },
+    "entity_id": 36,
+    "component_mask": 574001,
+    "Body": {
+        "value0": 0.0,
+        "value1": {
+            "value0": 1110.389892578125,
+            "value1": 674.91162109375
+        },
+        "value2": {
+            "value0": 0.0,
+            "value1": 0.0
+        },
+        "value3": {
+            "value0": 0.0,
+            "value1": 1.0
+        },
+        "value4": {
+            "value0": -1.0,
+            "value1": 0.0
+        },
+        "value5": false
+    },
+    "Render": {
+        "value0": {
+            "value0": 230,
+            "value1": 41,
+            "value2": 55,
+            "value3": 255
+        }
+    },
+    "FumoRect": {
+        "value0": 898.5425415039063,
+        "value1": 314.0931396484375,
+        "value2": 607.1298217773438,
+        "value3": 50.9592170715332
+    },
+    "ColliderObjectFlag": {
+        "value0": 0
+    },
+    "Serialized": {
+        "value0": 0
+    },
+    "LevelId": {
+        "value0": 0
     },
     "EditorSelectedObject": {
         "value0": 0

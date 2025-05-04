@@ -13,6 +13,7 @@ void StateHandler::jump_and_gravity_state_handler(
     const auto& gravity_strength = player_body.current_gravity_strength;
 
     float factor = 6;
+    float jump_progress; // curently unused
     if (player_state.jumping) {
 
         if (player_animation.frame_progress
@@ -23,29 +24,21 @@ void StateHandler::jump_and_gravity_state_handler(
         float jump_amount =
             FumoVec2DotProduct(player_body.get_real_y_velocity(),
                                gravity_direction);
+
         bool going_up = jump_amount < 0;
 
-        if (going_up) {
-            float jump_progress = 1 + jump_amount / JUMP_SCALING;
-            // PRINT("jumping up");
-            // PRINT(jump_progress);
-        } else {
-            float jump_progress = jump_amount / JUMP_SPEED_CAP;
-            // PRINT("jumping down");
-            // PRINT(jump_progress);
-
+        if (going_up) jump_progress = 1 + jump_amount / JUMP_SCALING;
+        else {
+            jump_progress = jump_amount / JUMP_SPEED_CAP;
             factor += 4; // use jump_progress for easing if desired
         }
 
         if (IsKeyReleased(KEY_SPACE)) {
-
             player_body.velocity = player_body.get_real_x_velocity()
                 + player_body.get_real_y_velocity() * 0.5f;
         }
 
-        if (!IsKeyDown(KEY_SPACE)) {
-            factor += 2;
-        }
+        if (!IsKeyDown(KEY_SPACE)) factor += 2;
     }
 
     // apply gravity changes

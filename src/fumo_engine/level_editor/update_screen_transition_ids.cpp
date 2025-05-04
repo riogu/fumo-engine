@@ -28,7 +28,7 @@ void ScreenTransitionUpdater::update_screen_id(
 
     struct ScreenDistance {
         Screen screen;
-        float distance = std::numeric_limits<float>::max();
+        float distance = 696969.69;
     };
 
     // FIXME: fix the fact that the 2 closest screens arent picked correctly

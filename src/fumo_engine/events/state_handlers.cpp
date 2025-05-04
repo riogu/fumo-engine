@@ -22,8 +22,7 @@ void StateHandler::handle_state(const EntityId& entity_id,
     auto& player_capsule = fumo_engine->ECS->get_component<Capsule>(entity_id);
     auto& player_animation =
         fumo_engine->ECS->get_component<AnimationInfo>(entity_id);
-    auto& player_state =
-        fumo_engine->ECS->get_component<EntityState>(entity_id);
+    auto& player_state = fumo_engine->ECS->get_component<EntityState>(entity_id);
     auto& moved_event_data =
         fumo_engine->ECS->get_component<MovedEventData>(entity_id);
 
@@ -36,6 +35,7 @@ void StateHandler::handle_state(const EntityId& entity_id,
     if (!player_state.colliding) {
         player_state.on_ground = false;
     }
+    PRINT(player_state.colliding)
 
     dash_state_handler(player_body,
                        player_capsule,

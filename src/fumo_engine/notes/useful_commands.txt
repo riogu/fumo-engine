@@ -1,7 +1,10 @@
 arg **/*.cpp
 argadd **/*.hpp
+argdo %s///ge | update
+argd *
 
 argdo %s/"fumo_engine\/collisions_and_physics\/point_line_collisions.hpp"/"fumo_engine\/collisions_and_physics\/point_line_collisions.hpp"/ge | update
 
-argd *
+
+%bd|e#
 

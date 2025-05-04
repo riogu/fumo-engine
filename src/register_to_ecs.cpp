@@ -48,12 +48,12 @@ void register_systems_scheduled() {
         ->add_unregistered_system<GravityUpdater,
                                   2,
                                   SystemMode::GAMEPLAY_RUNNING_ONLY>();
-    fumo_engine->ECS->register_system_unscheduled<LevelSerializer,
-                                                  SystemMode::ALWAYS_RUN>(
-        EntityQuery {
-            .component_mask =
-                fumo_engine->ECS->make_component_mask<LevelId, Serialized>(),
-            .component_filter = Filter::All});
+    fumo_engine->ECS
+        ->register_system_unscheduled<LevelSerializer, SystemMode::ALWAYS_RUN>(
+            EntityQuery {
+                .component_mask =
+                    fumo_engine->ECS->make_component_mask<LevelId, Serialized>(),
+                .component_filter = Filter::All});
 
     fumo_engine->ECS->register_system<GravityFieldHandler,
                                       3,
@@ -82,11 +82,10 @@ void register_systems_scheduled() {
     fumo_engine->ECS->register_system<ScreenTransitionHandler,
                                       5,
                                       SystemMode::GAMEPLAY_AND_PAUSED>(
-        EntityQuery {
-            .component_mask =
-                fumo_engine->ECS
-                    ->make_component_mask<Body, ScreenTransitionData>(),
-            .component_filter = Filter::All});
+        EntityQuery {.component_mask =
+                         fumo_engine->ECS
+                             ->make_component_mask<Body, ScreenTransitionData>(),
+                     .component_filter = Filter::All});
 
     fumo_engine->ECS
         ->register_system<ScreenTransitionUpdater, 6, SystemMode::EDITING_ONLY>(
@@ -134,10 +133,9 @@ void register_systems_scheduled() {
 }
 
 void register_unregistered_systems_unscheduled() {
-    fumo_engine->ECS
-        ->add_unregistered_system_unscheduled<SchedulerSystemECS,
-                                              SystemMode::ALWAYS_RUN>(
-            fumo_engine->ECS);
+    fumo_engine->ECS->add_unregistered_system_unscheduled<SchedulerSystemECS,
+                                                          SystemMode::ALWAYS_RUN>(
+        fumo_engine->ECS);
     // fumo_engine->ECS->add_unregistered_system_unscheduled<GravityBufferHandler>();
     // fumo_engine->ECS->add_unregistered_system_unscheduled<EntireAnimationPlayer>();
     fumo_engine->ECS
