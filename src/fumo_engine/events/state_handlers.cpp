@@ -35,7 +35,10 @@ void StateHandler::handle_state(const EntityId& entity_id,
     if (!player_state.colliding) {
         player_state.on_ground = false;
     }
-    PRINT(player_state.colliding)
+
+    PRINT_JSON_REPR(player_state);
+
+    // PRINT(player_state.colliding)
 
     dash_state_handler(player_body,
                        player_capsule,

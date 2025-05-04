@@ -61,6 +61,15 @@
 #define PRINT_NO_NAME(...) \
     FOR_EACH(_INNER_PRINT_NO_NAME, __VA_ARGS__) std::cerr << "\n";
 
+#define PRINT_JSON_REPR(x) \
+    { \
+        std::stringstream stream; \
+        cereal::JSONOutputArchive out(stream); \
+        out(x); \
+        std::cerr << #x << ", " << libassert::highlight_stringify(x) << " ---> " \
+                  << stream.rdbuf() << "\n}\n"; \
+    }
+
 struct FumoVec2 {
     float x {0.0f}; // Vector x component
     float y {0.0f}; // Vector y component
