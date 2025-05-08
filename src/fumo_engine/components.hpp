@@ -53,8 +53,7 @@ struct Body {
     }
 
     [[nodiscard]] FumoVec2 get_dash_x_velocity() {
-        return dash_x_direction
-            * FumoVec2DotProduct(velocity, dash_x_direction);
+        return dash_x_direction * FumoVec2DotProduct(velocity, dash_x_direction);
     }
 
     // -------------------------------------------------------------------------------
@@ -69,8 +68,7 @@ struct Body {
     }
 
     [[nodiscard]] FumoVec2 get_real_x_velocity() {
-        return real_x_direction
-            * FumoVec2DotProduct(velocity, real_x_direction);
+        return real_x_direction * FumoVec2DotProduct(velocity, real_x_direction);
     }
 
     // void scale_velocity(float scale) { velocity += gravity_direction * scale; }
@@ -115,8 +113,7 @@ struct Capsule {
         bottom_circle_center =
             player_body.position + player_body.real_gravity_direction * radius;
 
-        left_line.end =
-            top_circle_center - player_body.real_x_direction * radius;
+        left_line.end = top_circle_center - player_body.real_x_direction * radius;
         left_line.start =
             bottom_circle_center - player_body.real_x_direction * radius;
 

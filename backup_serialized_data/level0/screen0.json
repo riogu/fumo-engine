@@ -2,1514 +2,2136 @@
     "entity_id": 1,
     "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 4282.6533203125,
-            "value1": 579.2987060546875
+        "rotation": 0.0,
+        "position": {
+            "x": 3829.1875,
+            "y": 796.7567138671875
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 255,
-            "value1": 203,
-            "value2": 0,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
         }
     },
     "OutlineRect": {
-        "value0": {
-            "value0": 4457.3720703125,
-            "value1": 590.6682739257813,
-            "value2": 772.2960815429688,
-            "value3": 148.5597686767578
+        "outline_rect": {
+            "x": 3829.1875,
+            "y": 796.7567138671875,
+            "width": 198.08920288085938,
+            "height": 198.08920288085938
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 2,
-    "component_mask": 49713,
+    "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 0.0,
-            "value1": 940.0
+        "rotation": 0.0,
+        "position": {
+            "x": 956.9660034179688,
+            "y": 611.5908813476563
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
         }
     },
-    "FumoRect": {
-        "value0": 0.0,
-        "value1": 940.0,
-        "value2": 9643.0302734375,
-        "value3": 198.31954956054688
-    },
-    "ColliderObjectFlag": {
-        "value0": 0
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 1475.0,
+            "y": 540.0,
+            "width": 1072.6378173828126,
+            "height": 116.66661834716797
+        }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 3,
-    "component_mask": 50321,
+    "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 0.0,
-            "value1": 740.0
+        "rotation": 0.0,
+        "position": {
+            "x": 9590.55859375,
+            "y": 777.8067626953125
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 255,
-            "value1": 161,
-            "value2": 0,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
         }
     },
-    "ParallelGravityField": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 740.0,
-            "value2": 9653.03125,
-            "value3": 228.32029724121095
-        },
-        "value1": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value2": 900.0,
-        "value3": 0.0
-    },
-    "GravFieldFlag": {
-        "value0": 0
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 9590.55859375,
+            "y": 777.8067626953125,
+            "width": 150.0,
+            "height": 150.0
+        }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 4,
     "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 0.0,
-            "value1": 0.0
+        "rotation": 0.0,
+        "position": {
+            "x": -4.334460258483887,
+            "y": -190.60653686523438
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 228,
-            "value2": 48,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
         }
     },
     "OutlineRect": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 0.0,
-            "value2": 1920.0,
-            "value3": 1080.0
+        "outline_rect": {
+            "x": -285.0,
+            "y": -190.0,
+            "width": 9890.1767578125,
+            "height": 189.30491638183595
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 5,
-    "component_mask": 1097728,
+    "component_mask": 51217,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 8601.685546875,
+            "y": -708.44580078125
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
+        }
+    },
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 8601.685546875,
+            "y": -708.44580078125,
+            "width": 329.93145751953127,
+            "height": 40.0
+        }
+    },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
-    },
-    "Screen": {
-        "value0": 0,
-        "value1": {
-            "value0": 960.0,
-            "value1": 540.0
-        }
+        "level_id": 0
     },
     "entity_id": 6,
     "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 1920.0,
-            "value1": 0.0
+        "rotation": 0.0,
+        "position": {
+            "x": 2536.94482421875,
+            "y": 435.4725036621094
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 228,
-            "value2": 48,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 203,
+            "b": 0,
+            "a": 255
         }
     },
     "OutlineRect": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 0.0,
-            "value2": 1920.0,
-            "value3": 1080.0
+        "outline_rect": {
+            "x": 3147.658935546875,
+            "y": 480.38848876953127,
+            "width": 1266.7137451171876,
+            "height": 142.91600036621095
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 7,
-    "component_mask": 1097728,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 0.0,
+            "y": 940.0
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 0.0,
+        "y": 940.0,
+        "width": 10014.1845703125,
+        "height": 268.8926086425781
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
-    },
-    "Screen": {
-        "value0": 1,
-        "value1": {
-            "value0": 2880.0,
-            "value1": 540.0
-        }
+        "level_id": 0
     },
     "entity_id": 8,
-    "component_mask": 51217,
+    "component_mask": 50321,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 3840.0,
-            "value1": 0.0
+        "rotation": 0.0,
+        "position": {
+            "x": 0.0,
+            "y": 740.0
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 228,
-            "value2": 48,
-            "value3": 255
+        "color": {
+            "r": 255,
+            "g": 161,
+            "b": 0,
+            "a": 255
         }
     },
-    "OutlineRect": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 0.0,
-            "value2": 1920.0,
-            "value3": 1080.0
-        }
+    "ParallelGravityField": {
+        "field_fumo_rect": {
+            "x": 0.0,
+            "y": 740.0,
+            "width": 10011.1142578125,
+            "height": 226.91038513183595
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "gravity_strength": 900.0,
+        "rotation": 0.0
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 9,
-    "component_mask": 1097728,
+    "component_mask": 51217,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 0,
+            "g": 228,
+            "b": 48,
+            "a": 255
+        }
+    },
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1080.0
+        }
+    },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
-    },
-    "Screen": {
-        "value0": 2,
-        "value1": {
-            "value0": 4800.0,
-            "value1": 540.0
-        }
+        "level_id": 0
     },
     "entity_id": 10,
-    "component_mask": 51217,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 5760.0,
-            "value1": 0.0
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 228,
-            "value2": 48,
-            "value3": 255
-        }
-    },
-    "OutlineRect": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 0.0,
-            "value2": 1920.0,
-            "value3": 1080.0
-        }
-    },
+    "component_mask": 1097728,
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "Screen": {
+        "screen_id": 0,
+        "screen_position": {
+            "x": 960.0,
+            "y": 540.0
+        }
     },
     "entity_id": 11,
-    "component_mask": 1097728,
-    "Serialized": {
-        "value0": 0
-    },
-    "LevelId": {
-        "value0": 0
-    },
-    "Screen": {
-        "value0": 3,
-        "value1": {
-            "value0": 6720.0,
-            "value1": 540.0
-        }
-    },
-    "entity_id": 12,
     "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 7680.0,
-            "value1": 0.0
+        "rotation": 0.0,
+        "position": {
+            "x": 1920.0,
+            "y": 0.0
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 228,
-            "value2": 48,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 228,
+            "b": 48,
+            "a": 255
         }
     },
     "OutlineRect": {
-        "value0": {
-            "value0": 0.0,
-            "value1": 0.0,
-            "value2": 1920.0,
-            "value3": 1080.0
+        "outline_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1080.0
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
-    "entity_id": 13,
+    "entity_id": 12,
     "component_mask": 1097728,
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "Screen": {
-        "value0": 4,
-        "value1": {
-            "value0": 8640.0,
-            "value1": 540.0
+        "screen_id": 1,
+        "screen_position": {
+            "x": 2880.0,
+            "y": 540.0
         }
     },
-    "entity_id": 14,
-    "component_mask": 114705,
+    "entity_id": 13,
+    "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 1907.736572265625,
-            "value1": 807.3179931640625
+        "rotation": 0.0,
+        "position": {
+            "x": 3840.0,
+            "y": 0.0
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 127,
-            "value1": 106,
-            "value2": 79,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 228,
+            "b": 48,
+            "a": 255
+        }
+    },
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1080.0
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
-    "ScreenTransitionData": {
-        "value0": {
-            "value0": {
-                "value0": 0.0,
-                "value1": 0.0
-            },
-            "value1": {
-                "value0": 0.40872693061828616,
-                "value1": 129.94557189941407
-            }
-        },
-        "value1": {
-            "value0": 0,
-            "value1": {
-                "value0": 960.0,
-                "value1": 540.0
-            }
-        },
-        "value2": {
-            "value0": 1,
-            "value1": {
-                "value0": 2880.0,
-                "value1": 540.0
-            }
+    "entity_id": 14,
+    "component_mask": 1097728,
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "Screen": {
+        "screen_id": 2,
+        "screen_position": {
+            "x": 4800.0,
+            "y": 540.0
         }
     },
     "entity_id": 15,
-    "component_mask": 114705,
+    "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 3825.342041015625,
-            "value1": 816.1033935546875
+        "rotation": 0.0,
+        "position": {
+            "x": 5760.0,
+            "y": 0.0
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 127,
-            "value1": 106,
-            "value2": 79,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 228,
+            "b": 48,
+            "a": 255
+        }
+    },
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1080.0
         }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
-    },
-    "ScreenTransitionData": {
-        "value0": {
-            "value0": {
-                "value0": 0.0,
-                "value1": 0.0
-            },
-            "value1": {
-                "value0": 0.0,
-                "value1": 150.0
-            }
-        },
-        "value1": {
-            "value0": 1,
-            "value1": {
-                "value0": 2880.0,
-                "value1": 540.0
-            }
-        },
-        "value2": {
-            "value0": 2,
-            "value1": {
-                "value0": 4800.0,
-                "value1": 540.0
-            }
-        }
+        "level_id": 0
     },
     "entity_id": 16,
-    "component_mask": 50449,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 2838.03173828125,
-            "value1": 248.32015991210938
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
-        }
-    },
-    "CircularGravityField": {
-        "value0": 324.9994812011719,
-        "value1": 900.0,
-        "value2": {
-            "value0": 2818.03125,
-            "value1": 233.3201904296875
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 0.0
-        }
-    },
-    "GravFieldFlag": {
-        "value0": 0
-    },
+    "component_mask": 1097728,
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "Screen": {
+        "screen_id": 3,
+        "screen_position": {
+            "x": 6720.0,
+            "y": 540.0
+        }
     },
     "entity_id": 17,
-    "component_mask": 49683,
+    "component_mask": 51217,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 2826.82861328125,
-            "value1": 231.6824951171875
+        "rotation": 0.0,
+        "position": {
+            "x": 7680.0,
+            "y": 0.0
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
-    },
-    "Circle": {
-        "value0": 200.0
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 228,
+            "b": 48,
+            "a": 255
         }
     },
-    "ColliderObjectFlag": {
-        "value0": 0
+    "OutlineRect": {
+        "outline_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1080.0
+        }
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 18,
-    "component_mask": 49683,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 1392.4398193359376,
-            "value1": 382.4937744140625
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Circle": {
-        "value0": 40.0
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
-        }
-    },
-    "ColliderObjectFlag": {
-        "value0": 0
-    },
+    "component_mask": 1097728,
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "Screen": {
+        "screen_id": 4,
+        "screen_position": {
+            "x": 8640.0,
+            "y": 540.0
+        }
     },
     "entity_id": 19,
     "component_mask": 50449,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 299.9224853515625,
-            "value1": 369.8065185546875
+        "rotation": 0.0,
+        "position": {
+            "x": 295.0,
+            "y": 281.6666259765625
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
         }
     },
     "CircularGravityField": {
-        "value0": 395.0000915527344,
-        "value1": 900.0,
-        "value2": {
-            "value0": 299.9224853515625,
-            "value1": 369.8065185546875
+        "radius": 450.0,
+        "gravity_strength": 900.0,
+        "position": {
+            "x": 295.0,
+            "y": 281.6666259765625
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 0.0
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 0.0
         }
     },
     "GravFieldFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 20,
     "component_mask": 49683,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 299.9224853515625,
-            "value1": 369.8065185546875
+        "rotation": 0.0,
+        "position": {
+            "x": 295.0,
+            "y": 281.6666259765625
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Circle": {
-        "value0": 135.0000457763672
+        "radius": 233.3308868408203
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
         }
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 21,
-    "component_mask": 114705,
+    "component_mask": 574001,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 5749.650390625,
-            "value1": 781.9127197265625
+        "rotation": 0.0,
+        "position": {
+            "x": 956.9660034179688,
+            "y": 611.5908813476563
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 127,
-            "value1": 106,
-            "value2": 79,
-            "value3": 255
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
-    "Serialized": {
-        "value0": 0
-    },
-    "LevelId": {
-        "value0": 0
-    },
-    "ScreenTransitionData": {
-        "value0": {
-            "value0": {
-                "value0": 0.0,
-                "value1": 0.0
-            },
-            "value1": {
-                "value0": 5.070641040802002,
-                "value1": 157.10202026367188
-            }
-        },
-        "value1": {
-            "value0": 2,
-            "value1": {
-                "value0": 4800.0,
-                "value1": 540.0
-            }
-        },
-        "value2": {
-            "value0": 3,
-            "value1": {
-                "value0": 6720.0,
-                "value1": 540.0
-            }
-        }
-    },
-    "entity_id": 22,
-    "component_mask": 114705,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 7668.9580078125,
-            "value1": 747.244873046875
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Render": {
-        "value0": {
-            "value0": 127,
-            "value1": 106,
-            "value2": 79,
-            "value3": 255
-        }
-    },
-    "Serialized": {
-        "value0": 0
-    },
-    "LevelId": {
-        "value0": 0
-    },
-    "ScreenTransitionData": {
-        "value0": {
-            "value0": {
-                "value0": 0.0,
-                "value1": 0.0
-            },
-            "value1": {
-                "value0": -16.138269424438478,
-                "value1": 223.75619506835938
-            }
-        },
-        "value1": {
-            "value0": 3,
-            "value1": {
-                "value0": 6720.0,
-                "value1": 540.0
-            }
-        },
-        "value2": {
-            "value0": 4,
-            "value1": {
-                "value0": 8640.0,
-                "value1": 540.0
-            }
-        }
-    },
-    "entity_id": 23,
-    "component_mask": 50449,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 1394.1002197265626,
-            "value1": 388.85626220703127
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
-        }
-    },
-    "CircularGravityField": {
-        "value0": 116.92304992675781,
-        "value1": 900.0,
-        "value2": {
-            "value0": 1401.7879638671876,
-            "value1": 384.240966796875
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 0.0
-        }
-    },
-    "GravFieldFlag": {
-        "value0": 0
-    },
-    "Serialized": {
-        "value0": 0
-    },
-    "LevelId": {
-        "value0": 0
-    },
-    "entity_id": 28,
-    "component_mask": 50449,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 5028.80078125,
-            "value1": 322.09686279296877
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
-        }
-    },
-    "CircularGravityField": {
-        "value0": 360.0235595703125,
-        "value1": 900.0,
-        "value2": {
-            "value0": 5028.80078125,
-            "value1": 322.09686279296877
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 0.0
-        }
-    },
-    "GravFieldFlag": {
-        "value0": 0
-    },
-    "Serialized": {
-        "value0": 0
-    },
-    "LevelId": {
-        "value0": 0
-    },
-    "entity_id": 29,
-    "component_mask": 49683,
-    "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 5028.80078125,
-            "value1": 322.09686279296877
-        },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
-        },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
-        },
-        "value5": false
-    },
-    "Circle": {
-        "value0": 168.57130432128907
-    },
-    "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
-        }
+    "FumoRect": {
+        "x": 1475.0,
+        "y": 540.0,
+        "width": 1072.6378173828126,
+        "height": 116.66661834716797
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "EditorSelectedObject": {
+        "satisfy_cereal": 0
+    },
+    "entity_id": 22,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": -4.334460258483887,
+            "y": -190.60653686523438
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": -285.0,
+        "y": -190.0,
+        "width": 9890.1767578125,
+        "height": 189.30491638183595
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 23,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": -239.10665893554688,
+            "y": -196.41282653808595
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": -355.2467041015625,
+        "y": 284.0458984375,
+        "width": 251.71983337402345,
+        "height": 1320.385009765625
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 24,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 1823.4609375,
+            "y": -243.60354614257813
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 1658.5589599609376,
+        "y": -306.9337463378906,
+        "width": 172.4318389892578,
+        "height": 864.4445190429688
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 25,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 3767.93115234375,
+            "y": -272.9930419921875
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 3788.83154296875,
+        "y": 87.90106201171875,
+        "width": 148.46592712402345,
+        "height": 841.7881469726563
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 26,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 2537.87060546875,
+            "y": 563.7880859375
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 3871.0537109375,
+        "y": 601.2344360351563,
+        "width": 1377.4786376953126,
+        "height": 137.11509704589845
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 27,
+    "component_mask": 50321,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 963.779052734375,
+            "y": 466.83026123046877
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 255,
+            "g": 161,
+            "b": 0,
+            "a": 255
+        }
+    },
+    "ParallelGravityField": {
+        "field_fumo_rect": {
+            "x": 1268.037841796875,
+            "y": 463.0911560058594,
+            "width": 928.3128051757813,
+            "height": 150.2609405517578
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "gravity_strength": 900.0,
+        "rotation": 0.0
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 28,
+    "component_mask": 50321,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 2536.94482421875,
+            "y": 435.4725036621094
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 255,
+            "g": 161,
+            "b": 0,
+            "a": 255
+        }
+    },
+    "ParallelGravityField": {
+        "field_fumo_rect": {
+            "x": 3147.658935546875,
+            "y": 480.38848876953127,
+            "width": 1266.7137451171876,
+            "height": 142.91600036621095
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "gravity_strength": 900.0,
+        "rotation": 0.0
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 29,
+    "component_mask": 50449,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 2271.688232421875,
+            "y": 201.756591796875
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
+        }
+    },
+    "CircularGravityField": {
+        "radius": 292.5077819824219,
+        "gravity_strength": 900.0,
+        "position": {
+            "x": 2271.688232421875,
+            "y": 201.756591796875
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
     },
     "entity_id": 30,
     "component_mask": 49683,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 4166.009765625,
-            "value1": 348.16998291015627
+        "rotation": 0.0,
+        "position": {
+            "x": 2271.688232421875,
+            "y": 201.756591796875
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Circle": {
-        "value0": 83.14884185791016
+        "radius": 102.3714828491211
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
         }
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 31,
-    "component_mask": 50449,
+    "component_mask": 114705,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 4165.943359375,
-            "value1": 347.81109619140627
+        "rotation": 0.0,
+        "position": {
+            "x": 1909.828125,
+            "y": 936.3831787109375
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 0,
-            "value1": 121,
-            "value2": 241,
-            "value3": 255
+        "color": {
+            "r": 127,
+            "g": 106,
+            "b": 79,
+            "a": 255
         }
-    },
-    "CircularGravityField": {
-        "value0": 175.23843383789063,
-        "value1": 900.0,
-        "value2": {
-            "value0": 4165.943359375,
-            "value1": 347.81109619140627
-        },
-        "value3": {
-            "value0": 0.0,
-            "value1": 0.0
-        }
-    },
-    "GravFieldFlag": {
-        "value0": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
-    "entity_id": 34,
-    "component_mask": 574001,
+    "ScreenTransitionData": {
+        "transition_line": {
+            "start": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "end": {
+                "x": 3.7920033931732179,
+                "y": -298.78173828125
+            }
+        },
+        "previous_screen": {
+            "screen_id": 0,
+            "screen_position": {
+                "x": 960.0,
+                "y": 540.0
+            }
+        },
+        "next_screen": {
+            "screen_id": 1,
+            "screen_position": {
+                "x": 2880.0,
+                "y": 540.0
+            }
+        }
+    },
+    "entity_id": 32,
+    "component_mask": 638993,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 4282.6533203125,
-            "value1": 579.2987060546875
+        "rotation": 0.0,
+        "position": {
+            "x": 3829.1875,
+            "y": 796.7567138671875
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 127,
+            "g": 106,
+            "b": 79,
+            "a": 255
+        }
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "ScreenTransitionData": {
+        "transition_line": {
+            "start": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "end": {
+                "x": 8.51569652557373,
+                "y": -197.9060821533203
+            }
+        },
+        "previous_screen": {
+            "screen_id": 1,
+            "screen_position": {
+                "x": 2880.0,
+                "y": 540.0
+            }
+        },
+        "next_screen": {
+            "screen_id": 2,
+            "screen_position": {
+                "x": 4800.0,
+                "y": 540.0
+            }
+        }
+    },
+    "EditorSelectedObject": {
+        "satisfy_cereal": 0
+    },
+    "entity_id": 33,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 2299.188232421875,
+            "y": -980.7432861328125
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 4457.3720703125,
-        "value1": 590.6682739257813,
-        "value2": 772.2960815429688,
-        "value3": 148.5597686767578
+        "x": 2299.188232421875,
+        "y": -980.7432861328125,
+        "width": 145.78684997558595,
+        "height": 40.0
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
-    "EditorSelectedObject": {
-        "value0": 0
+    "entity_id": 34,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 5664.37353515625,
+            "y": -253.932373046875
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 5650.13232421875,
+        "y": 355.8106689453125,
+        "width": 191.61697387695313,
+        "height": 939.3382568359375
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 35,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 7562.5966796875,
+            "y": -383.71575927734377
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
+        }
+    },
+    "FumoRect": {
+        "x": 7608.8486328125,
+        "y": 211.28369140625,
+        "width": 221.2451934814453,
+        "height": 997.498291015625
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
     },
     "entity_id": 36,
     "component_mask": 49713,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 3051.65771484375,
-            "value1": 667.8112182617188
+        "rotation": 0.0,
+        "position": {
+            "x": 9476.685546875,
+            "y": -637.8839111328125
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 3051.65771484375,
-        "value1": 667.8112182617188,
-        "value2": 937.1436767578125,
-        "value3": 82.85628509521485
+        "x": 9241.685546875,
+        "y": 301.5540771484375,
+        "width": 249.99864196777345,
+        "height": 1233.876220703125
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 37,
     "component_mask": 49713,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 1854.515380859375,
-            "value1": -0.3310052752494812
+        "rotation": 0.0,
+        "position": {
+            "x": 8661.689453125,
+            "y": 494.05010986328127
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 2083.086181640625,
-        "value1": 127.81109619140625,
-        "value2": 142.85646057128907,
-        "value3": 739.5706787109375
+        "x": 8576.685546875,
+        "y": 279.0540771484375,
+        "width": 864.9962768554688,
+        "height": 95.00765228271485
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 38,
-    "component_mask": 49713,
+    "component_mask": 574001,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": -19.58431625366211,
-            "value1": -159.56362915039063
+        "rotation": 0.0,
+        "position": {
+            "x": 8601.685546875,
+            "y": -708.44580078125
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 70.9635009765625,
-        "value1": -158.21234130859376,
-        "value2": 9625.1650390625,
-        "value3": 154.55604553222657
+        "x": 8601.685546875,
+        "y": -708.44580078125,
+        "width": 329.93145751953127,
+        "height": 40.0
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "EditorSelectedObject": {
+        "satisfy_cereal": 0
     },
     "entity_id": 39,
     "component_mask": 49713,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 3773.244140625,
-            "value1": -123.07682800292969
+        "rotation": 0.0,
+        "position": {
+            "x": 4556.427734375,
+            "y": 559.82763671875
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 3750.44140625,
-        "value1": 102.4248046875,
-        "value2": 114.39404296875,
-        "value3": 821.0032958984375
+        "x": 4878.64404296875,
+        "y": 604.7290649414063,
+        "width": 552.4396362304688,
+        "height": 127.61505126953125
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 40,
-    "component_mask": 49713,
+    "component_mask": 50449,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 5710.44140625,
-            "value1": -41.32170867919922
+        "rotation": 0.0,
+        "position": {
+            "x": 6310.873046875,
+            "y": 361.75140380859377
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
         }
     },
-    "FumoRect": {
-        "value0": 5640.44189453125,
-        "value1": 147.4248046875,
-        "value2": 110.00147247314453,
-        "value3": 667.4930419921875
+    "CircularGravityField": {
+        "radius": 327.5056457519531,
+        "gravity_strength": 900.0,
+        "position": {
+            "x": 6458.3740234375,
+            "y": 474.255859375
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 0.0
+        }
     },
-    "ColliderObjectFlag": {
-        "value0": 0
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 41,
-    "component_mask": 49713,
+    "component_mask": 49683,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 7617.560546875,
-            "value1": -141.54527282714845
+        "rotation": 0.0,
+        "position": {
+            "x": 6306.48046875,
+            "y": 349.8641357421875
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
+    },
+    "Circle": {
+        "radius": 175.20118713378907
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
         }
     },
-    "FumoRect": {
-        "value0": 6970.44189453125,
-        "value1": 342.4248046875,
-        "value2": 113.06444549560547,
-        "value3": 760.4568481445313
-    },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
     },
     "entity_id": 42,
-    "component_mask": 49713,
+    "component_mask": 50449,
     "Body": {
-        "value0": 0.0,
-        "value1": {
-            "value0": 9545.44921875,
-            "value1": -152.19180297851563
+        "rotation": 0.0,
+        "position": {
+            "x": 7065.873046875,
+            "y": 359.25579833984377
         },
-        "value2": {
-            "value0": 0.0,
-            "value1": 0.0
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
         },
-        "value3": {
-            "value0": 0.0,
-            "value1": 1.0
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
         },
-        "value4": {
-            "value0": -1.0,
-            "value1": 0.0
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
         },
-        "value5": false
+        "inverse_direction": false
     },
     "Render": {
-        "value0": {
-            "value0": 230,
-            "value1": 41,
-            "value2": 55,
-            "value3": 255
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
+        }
+    },
+    "CircularGravityField": {
+        "radius": 265.0178527832031,
+        "gravity_strength": 900.0,
+        "position": {
+            "x": 7055.8740234375,
+            "y": 344.255859375
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 43,
+    "component_mask": 49713,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 6963.361328125,
+            "y": 256.75579833984377
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 230,
+            "g": 41,
+            "b": 55,
+            "a": 255
         }
     },
     "FumoRect": {
-        "value0": 9999.7333984375,
-        "value1": 424.953857421875,
-        "value2": 117.39263153076172,
-        "value3": 737.9923706054688
+        "x": 7055.8740234375,
+        "y": 344.255859375,
+        "width": 200.0,
+        "height": 200.0
     },
     "ColliderObjectFlag": {
-        "value0": 0
+        "satisfy_cereal": 0
     },
     "Serialized": {
-        "value0": 0
+        "file_id": 0
     },
     "LevelId": {
-        "value0": 0
+        "level_id": 0
+    },
+    "entity_id": 44,
+    "component_mask": 50449,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 8128.9814453125,
+            "y": 437.36407470703127
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
+        }
+    },
+    "CircularGravityField": {
+        "radius": 219.99998474121095,
+        "gravity_strength": 900.0,
+        "position": {
+            "x": 8128.9814453125,
+            "y": 437.36407470703127
+        },
+        "gravity_direction": {
+            "x": 0.0,
+            "y": 0.0
+        }
+    },
+    "GravFieldFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 45,
+    "component_mask": 49683,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 8130.1650390625,
+            "y": 434.33770751953127
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Circle": {
+        "radius": 120.00098419189453
+    },
+    "Render": {
+        "color": {
+            "r": 0,
+            "g": 121,
+            "b": 241,
+            "a": 255
+        }
+    },
+    "ColliderObjectFlag": {
+        "satisfy_cereal": 0
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "entity_id": 46,
+    "component_mask": 114705,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 5754.4541015625,
+            "y": 794.6300048828125
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 127,
+            "g": 106,
+            "b": 79,
+            "a": 255
+        }
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "ScreenTransitionData": {
+        "transition_line": {
+            "start": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "end": {
+                "x": -2.4993736743927,
+                "y": -175.00167846679688
+            }
+        },
+        "previous_screen": {
+            "screen_id": 2,
+            "screen_position": {
+                "x": 4800.0,
+                "y": 540.0
+            }
+        },
+        "next_screen": {
+            "screen_id": 3,
+            "screen_position": {
+                "x": 6720.0,
+                "y": 540.0
+            }
+        }
+    },
+    "entity_id": 47,
+    "component_mask": 114705,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 7677.74609375,
+            "y": 791.1439819335938
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 127,
+            "g": 106,
+            "b": 79,
+            "a": 255
+        }
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "ScreenTransitionData": {
+        "transition_line": {
+            "start": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "end": {
+                "x": -0.6598994731903076,
+                "y": -200.19834899902345
+            }
+        },
+        "previous_screen": {
+            "screen_id": 3,
+            "screen_position": {
+                "x": 6720.0,
+                "y": 540.0
+            }
+        },
+        "next_screen": {
+            "screen_id": 4,
+            "screen_position": {
+                "x": 8640.0,
+                "y": 540.0
+            }
+        }
+    },
+    "entity_id": 48,
+    "component_mask": 114705,
+    "Body": {
+        "rotation": 0.0,
+        "position": {
+            "x": 9590.55859375,
+            "y": 777.8067626953125
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "dash_gravity_direction": {
+            "x": 0.0,
+            "y": 1.0
+        },
+        "dash_x_direction": {
+            "x": -1.0,
+            "y": 0.0
+        },
+        "inverse_direction": false
+    },
+    "Render": {
+        "color": {
+            "r": 127,
+            "g": 106,
+            "b": 79,
+            "a": 255
+        }
+    },
+    "Serialized": {
+        "file_id": 0
+    },
+    "LevelId": {
+        "level_id": 0
+    },
+    "ScreenTransitionData": {
+        "transition_line": {
+            "start": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "end": {
+                "x": 0.0,
+                "y": 150.0
+            }
+        },
+        "previous_screen": {
+            "screen_id": 4,
+            "screen_position": {
+                "x": 8640.0,
+                "y": 540.0
+            }
+        },
+        "next_screen": {
+            "screen_id": 4,
+            "screen_position": {
+                "x": 8640.0,
+                "y": 540.0
+            }
+        }
     }
 }

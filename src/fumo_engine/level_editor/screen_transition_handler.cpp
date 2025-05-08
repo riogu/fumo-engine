@@ -1,5 +1,6 @@
 #include "fumo_engine/collisions_and_physics/collision_functions.hpp"
 #include "fumo_engine/core/fumo_engine.hpp"
+#include "fumo_raylib.hpp"
 extern std::unique_ptr<FumoEngine> fumo_engine;
 #include "fumo_engine/level_editor/screen_handler.hpp"
 #include "fumo_engine/screen_components.hpp"
@@ -58,7 +59,7 @@ void ScreenTransitionHandler::check_for_screen_transition() {
 
             collided = true;
 
-            PRINT_NO_NAME("WE COLLIDED WITH LINE", "YEAH")
+            // PRINT_JSON_REPR(player_body)
 
             fumo_engine->engine_state = EngineState::GAMEPLAY_PAUSED;
 

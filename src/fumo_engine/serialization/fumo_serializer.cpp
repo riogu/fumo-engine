@@ -15,8 +15,7 @@ void clear_files_for_serialization() {
 
     fs::copy(fs::current_path(),
              "../backup_serialized_data",
-             fs::copy_options::recursive
-                 | fs::copy_options::overwrite_existing);
+             fs::copy_options::recursive | fs::copy_options::overwrite_existing);
 
     for (const auto& directory : fs::directory_iterator(fs::current_path())) {
 

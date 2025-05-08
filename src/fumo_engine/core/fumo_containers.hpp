@@ -52,8 +52,7 @@ class NamedComponentContainer {
                      entity_name,
                      named_entity_ids);
 
-        return fumo_engine->ECS->get_component<T>(
-            named_entity_ids[entity_name]);
+        return fumo_engine->ECS->get_component<T>(named_entity_ids[entity_name]);
     }
 
   private:

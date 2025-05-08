@@ -94,7 +94,14 @@ struct FumoRect {
     // commonly the position is on a separate Body{} component
     //
     // here because raylib is c and i cant add a damn template to the source code
-    SERIALIZE(x, y, width, height)
+    template<class Archive>
+    void serialize(Archive& archive) {
+        archive(cereal ::make_nvp(std ::string("x"), x),
+                cereal ::make_nvp(std ::string("y"), y),
+                cereal ::make_nvp(std ::string("width"), width),
+                cereal ::make_nvp(std ::string("height"), height));
+    }
+
     float x; // FumoRect top-left corner position x
     float y; // FumoRect top-left corner position y
     float width; // FumoRect width
