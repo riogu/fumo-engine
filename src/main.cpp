@@ -17,8 +17,8 @@ int main(void) {
     //-------------------------------------------------------------------------
     fumo_engine = std::make_unique<FumoEngine>();
 
-    fumo_engine->initialize(EngineMode::LEVEL_EDITING, EngineState::EDITING);
-    // fumo_engine->initialize(EngineMode::GAMEPLAY, EngineState::GAMEPLAY_RUNNING);
+    // fumo_engine->initialize(EngineMode::LEVEL_EDITING, EngineState::EDITING);
+    fumo_engine->initialize(EngineMode::GAMEPLAY, EngineState::GAMEPLAY_RUNNING);
     //
     //------------------------------------------------------------------------
     // must be done before fumo_engine->setup_game();

@@ -21,7 +21,8 @@ void clear_files_for_serialization() {
 
         if (!directory.is_directory()) [[unlikely]] {
             PANIC(
-                "added a file into serialized_data (should only have directories)");
+                "added a file into serialized_data (should only have \
+                directories)");
         }
         fs::remove_all(directory);
     }
