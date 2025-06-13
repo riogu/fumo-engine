@@ -1,7 +1,44 @@
 # fumo_engine
 This is the game engine i made as a wrapper around raylib to add more functionality that is needed to make a scalable game.
 The only goal for this engine is making my game based around gravity platformer physics, it is not intended to be used as a standalone engine, and i don't really recommend using it.
-Implemented features:
+
+example of main.cpp.
+```cpp
+int main(void) {
+    Initialization::initialize_window();
+    //-------------------------------------------------------------------------
+    fumo_engine = std::make_unique<FumoEngine>();
+
+    // fumo_engine->initialize(EngineMode::LEVEL_EDITING, EngineState::EDITING);
+    fumo_engine->initialize(EngineMode::GAMEPLAY, EngineState::GAMEPLAY_RUNNING);
+    //
+    //------------------------------------------------------------------------
+    // must be done before fumo_engine->setup_game();
+    Initialization::initialize_all_textures();
+
+    // all components MUST be added to ALL_COMPONENTS_X_MACRO()
+    // to be registered into fumo_engine
+    Initialization::register_all_to_fumo_engine();
+
+    //-------------------------------------------------------------------------
+    fumo_engine->setup_game();
+    FumoSerializer::deserialize_levels();
+    //-------------------------------------------------------------------------
+
+    while (fumo_engine->engine_state != EngineState::SHOULD_CLOSE) {
+        fumo_engine->frame_loop();
+    }
+    //-------------------------------------------------------------------------
+    // unload textures before closing the OpenGL context
+    // Close window and OpenGL context
+    fumo_engine->destroy_and_unload_game();
+    //------------------------------------------------------------------------
+
+    return 0;
+}
+```
+# Implemented features
+
 - ECS
 > the game engine's core. Is used to manage game data globally and provide queries for the game's systems.
 > mostly follows the traditional ECS format, has packed arrays for components and systems provide the components they want to query upfront and get updated whenever an entity has a change to their components, or gets destroyd.
