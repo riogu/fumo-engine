@@ -48,7 +48,7 @@ int main(void) {
 > an okay physics library i made myself for collision detection + solving. handles capsules, lines, rectangles, circles (and also allows for rotations to the rectangles with small modifications). could be adapted to also support polygons, but it wouldn't be very optimal. most collision detection is done with naive methods, but for the purposes of this engine and the games made with it, it is good enough.
 > Collision solving is done mostly with shape casting.
 - Level editor
-> simple GUI layout with buttons specifically related to gravity platformer, it is just used to make it easier to create the levels and place the obstacles on each screen for developing gravity platformer.
+> simple editor built into the game specifically related to gravity platformer, it is just used to make it easier to create the levels and place the obstacles on each screen for developing gravity platformer.
 - Serialization
 > relies on cereal serialization library for this functionality. allows for saving the current game progress, saving levels in the level editor, and just keeping permanent data (with backups) around to help with making the game.
 - Events and Scheduler
