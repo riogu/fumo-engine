@@ -5,13 +5,11 @@ The only goal for this engine is making my game based around gravity platformer 
 ---
 Here we use the level editor to make a level:
 
-[<img src = "[https://github.com/user-attachments/assets/cbe4b968-dcc7-494d-b6b6-62662f9f4915](https://github.com/user-attachments/assets/eac1c043-27c3-4696-9789-d65697ca40d9
-)" width ="100%">](https://github.com/user-attachments/assets/eac1c043-27c3-4696-9789-d65697ca40d9)
+[<img src = "[https://github.com/user-attachments/assets/cbe4b968-dcc7-494d-b6b6-62662f9f4915](https://github.com/user-attachments/assets/eac1c043-27c3-4696-9789-d65697ca40d9)" width ="100%">](https://github.com/user-attachments/assets/eac1c043-27c3-4696-9789-d65697ca40d9)
 
 Then we play the level we created:
 
-[<img src = "[https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6](https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6
-)" width ="100%">](https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6)
+[<img src = "[https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6](https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6)" width ="100%">](https://github.com/user-attachments/assets/4c87c412-d723-4616-a1c1-f2c1e4beabd6)
 
 
 example of main.cpp.
