@@ -2,6 +2,7 @@
 This is the game engine i made as a wrapper around raylib to add more functionality that is needed to make a scalable game.
 The only goal for this engine is making my game based around gravity platformer physics, it is not intended to be used as a standalone engine, and i don't really recommend using it.
 
+---
 Here, first we use the level editor to make a level, and then afterwards we change the engine to gameplay and play it
 
 
